@@ -9,6 +9,7 @@ export default defineConfig({
     // Tailwind is not being actively used – do not remove them
     react(),
     tailwindcss(),
+    // NOTE: removed temporary figma:asset resolver — imports are now local
   ],
   resolve: {
     alias: {

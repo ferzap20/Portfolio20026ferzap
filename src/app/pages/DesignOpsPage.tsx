@@ -4,16 +4,16 @@ import { motion } from "motion/react";
 import { SubPageLayout } from "../components/SubPageLayout";
 import { ProjectCard } from "../components/ProjectCard";
 
-// Product Process / Design Ops images
-import imgDesignSystem1 from "figma:asset/7d72c1df653427e908365dddb6d776409741d85e.png";
-import imgDesignSystem2 from "figma:asset/6869f506be388995d98f4b9a224edb1c4d2298ae.png";
-import imgDesignSystem3 from "figma:asset/be5e4a1389554e3a02d7ae70f370d923cd8ffd49.png";
-import imgOnboarding1 from "figma:asset/f5f63b34b766e082e57d61ccc20f6b43ba078762.png";
-import imgOnboarding2 from "figma:asset/df718dcb6f0b7d14ad911004dbd9dc9153cebd84.png";
-import imgUnreal1 from "figma:asset/f71208b1eef7c4fa8a5378861e11564ec37ce31b.png";
-import imgUnreal2 from "figma:asset/4fadeea294524799a7e2ee4ffc60c9e28d87fcb7.png";
-import imgUnreal3 from "figma:asset/5e66204d108d1cc3602686b3d0950e8dd66a2f0d.png";
-import imgOnboarding3 from "figma:asset/f9f6240c282cb68a154047d432fbf9c75c3166bd.png";
+// Product Process / Design Ops images (local files)
+import imgDesignSystem1 from "@/imports/design-system-1.png";
+import imgDesignSystem2 from "@/imports/design-system-2.png";
+import imgDesignSystem3 from "@/imports/design-system-3.png";
+import imgOnboarding1 from "@/imports/onboarding-1.png";
+import imgOnboarding2 from "@/imports/onboarding-2.png";
+import imgUnreal1 from "@/imports/unreal-1.png";
+import imgUnreal2 from "@/imports/unreal-2.png";
+import imgUnreal3 from "@/imports/unreal-3.png";
+import imgOnboarding3 from "@/imports/onboarding-3.png";
 
 export function DesignOpsPage() {
   return (

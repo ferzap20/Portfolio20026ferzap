@@ -21,9 +21,9 @@ import { BrandDesignPage } from "./pages/BrandDesignPage";
 import { PersonalProjectsPage } from "./pages/PersonalProjectsPage";
 import { ContactSection } from "./components/ContactSection";
 
-// Hero portrait
-import imgPortraitBW from "figma:asset/db989effb3e9c23f74feb38c5e82460b4fa678b4.png";
-import imgPortraitColor from "figma:asset/d6b1509d4837df1bf9cd6dff1864e94e0a279463.png";
+// Hero portrait (local assets)
+import imgPortraitBW from "@/imports/portrait-bw.png";
+import imgPortraitColor from "@/imports/portrait-color.png";
 
 const NAV_ITEMS = [
   { id: "design-ops", label: "Design Ops", path: "/design-ops" },

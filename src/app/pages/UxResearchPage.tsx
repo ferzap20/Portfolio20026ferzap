@@ -4,20 +4,20 @@ import { motion } from "motion/react";
 import { SubPageLayout } from "../components/SubPageLayout";
 import { ProjectCard } from "../components/ProjectCard";
 
-// UX Research images
-import imgUxMenu1 from "figma:asset/ade0ae5bf7f2e0c1fb65b41137bdcef3b74fb71d.png";
-import imgUxMenu2 from "figma:asset/739c69c72961536e30610f483f7a83856a8a0bd2.png";
-import imgUxMenu3 from "figma:asset/794f738763319b197837d54fbe831117a392e266.png";
-import imgUxMenu4 from "figma:asset/4e84e84ead74a14b68518afb1a5bbc9de6e30ca4.png";
-import imgUxChart1 from "figma:asset/5bdec665b0b801027081608cacbd144ddd8ff1e6.png";
-import imgUxNav1 from "figma:asset/ee6c51ff2bb1895787d8e15d11e95604e01d551b.png";
-import imgUxNav2 from "figma:asset/36ac8abbd6b25b165fb8eff9f8e403e0691f3f01.png";
-import imgUxChart2 from "figma:asset/b36103db3ea13e6516647db46be9b41810cbb0b4.png";
-import imgUxIA1 from "figma:asset/48ac95d4439c3330c5d92fb64fcdbfd071bd0704.png";
-import imgUxIA2 from "figma:asset/7e2e264dc6e48c8570c2111521b76c20cf4c3e82.png";
-import imgUxIA3 from "figma:asset/79a69007cb724bd3406c1c13d5ed8d6903693331.png";
-import imgUxIA4 from "figma:asset/4c09f04f08438d4917af3902517475f37297c2ec.png";
-import imgUxIA5 from "figma:asset/6e47502c219e51167b285b04e1714055af435421.png";
+// UX Research images (local files)
+import imgUxMenu1 from "@/imports/ux-menu-1.png";
+import imgUxMenu2 from "@/imports/ux-menu-2.png";
+import imgUxMenu3 from "@/imports/ux-menu-3.png";
+import imgUxMenu4 from "@/imports/ux-menu-4.png";
+import imgUxChart1 from "@/imports/ux-chart-1.png";
+import imgUxNav1 from "@/imports/ux-nav-1.png";
+import imgUxNav2 from "@/imports/ux-nav-2.png";
+import imgUxChart2 from "@/imports/ux-chart-2.png";
+import imgUxIA1 from "@/imports/ux-ia-1.png";
+import imgUxIA2 from "@/imports/ux-ia-2.png";
+import imgUxIA3 from "@/imports/ux-ia-3.png";
+import imgUxIA4 from "@/imports/ux-ia-4.png";
+import imgUxIA5 from "@/imports/ux-ia-5.png";
 
 export function UxResearchPage() {
   return (

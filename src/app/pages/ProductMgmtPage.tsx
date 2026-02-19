@@ -4,11 +4,11 @@ import { motion } from "motion/react";
 import { SubPageLayout } from "../components/SubPageLayout";
 import { ProjectCard } from "../components/ProjectCard";
 
-// Product Management images
-import imgProdMgmt1 from "figma:asset/719e1d181330373812e7a0a2cebd73bf07ac2b98.png";
-import imgProdMgmt2 from "figma:asset/d4698590449169c9738c38b66883f6412c472a75.png";
-import imgProdMgmt3 from "figma:asset/e75f644534e47dbc96b779ba210efbecb217382d.png";
-import imgProdMgmt4 from "figma:asset/9870f8a8cbe4b7f8ca04d678001a7449c6a4cc24.png";
+// Product Management images (local files)
+import imgProdMgmt1 from "@/imports/prod-mgmt-1.png";
+import imgProdMgmt2 from "@/imports/prod-mgmt-2.png";
+import imgProdMgmt3 from "@/imports/prod-mgmt-3.png";
+import imgProdMgmt4 from "@/imports/prod-mgmt-4.png";
 
 export function ProductMgmtPage() {
   return (

@@ -6,11 +6,11 @@ import {
   PersonalProjectCardProps,
 } from "../components/PersonalProjectCard";
 
-// Project header images
-import imgTimap from "figma:asset/0eb399add53295ccee0a84bdd55ac4132834e529.png";
-import imgBurnAfter from "figma:asset/6fcc1938cd7165c84c207e5c0dea52d2ff1982dc.png";
-import imgEatby from "figma:asset/67a26c0e7f1297caa027354b56e70d5c0061f624.png";
-import imgPrepshot from "figma:asset/87179aa0d54fed40aa26f99d7c7a0d0bebca2a61.png";
+// Project header images (local files)
+import imgTimap from "@/imports/timap.png";
+import imgBurnAfter from "@/imports/burn-after-24h.png";
+import imgEatby from "@/imports/eatby.png";
+import imgPrepshot from "@/imports/prepshot.png";
 
 const PROJECTS: PersonalProjectCardProps[] = [
   {
