@@ -11,7 +11,6 @@ import imgDesignSystem3 from "@/imports/design-system-3.png";
 import imgOnboarding1 from "@/imports/onboarding-1.png";
 import imgOnboarding2 from "@/imports/onboarding-2.png";
 import imgUnreal1 from "@/imports/unreal-1.png";
-import imgUnreal2 from "@/imports/unreal-2.png";
 import imgUnreal3 from "@/imports/unreal-3.png";
 import imgOnboarding3 from "@/imports/onboarding-3.png";
 

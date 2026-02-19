@@ -20,18 +20,11 @@ import { UxResearchPage } from "./pages/UxResearchPage";
 import { BrandDesignPage } from "./pages/BrandDesignPage";
 import { PersonalProjectsPage } from "./pages/PersonalProjectsPage";
 import { ContactSection } from "./components/ContactSection";
+import { NAV_ITEMS } from "./constants";
 
 // Hero portrait (local assets)
 import imgPortraitBW from "@/imports/portrait-bw.png";
 import imgPortraitColor from "@/imports/portrait-color.png";
-
-const NAV_ITEMS = [
-  { id: "design-ops", label: "Design Ops", path: "/design-ops" },
-  { id: "product-mgmt", label: "Product Mgmt", path: "/product-mgmt" },
-  { id: "ux-research", label: "UX Research", path: "/ux-research" },
-  { id: "brand-design", label: "Brand & Design", path: "/brand-design" },
-  { id: "personal-projects", label: "Personal Projects", path: "/personal-projects" },
-];
 
 const CATEGORY_CARDS = [
 

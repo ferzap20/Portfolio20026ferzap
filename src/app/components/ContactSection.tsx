@@ -4,14 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot, faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router";
-
-const NAV_ITEMS = [
-  { id: "design-ops", label: "Design Ops", path: "/design-ops" },
-  { id: "product-mgmt", label: "Product Mgmt", path: "/product-mgmt" },
-  { id: "ux-research", label: "UX Research", path: "/ux-research" },
-  { id: "brand-design", label: "Brand & Design", path: "/brand-design" },
-  { id: "personal-projects", label: "Personal Projects", path: "/personal-projects" },
-];
+import { NAV_ITEMS } from "../constants";
 
 export function ContactSection() {
   const [copied, setCopied] = useState(false);
