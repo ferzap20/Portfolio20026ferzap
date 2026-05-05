@@ -20,43 +20,32 @@ import { UxResearchPage } from "./pages/UxResearchPage";
 import { BrandDesignPage } from "./pages/BrandDesignPage";
 import { PersonalProjectsPage } from "./pages/PersonalProjectsPage";
 import { ContactSection } from "./components/ContactSection";
+import { EnlargeableImage } from "./components/EnlargeableImage";
 import { NAV_ITEMS } from "./constants";
 
 // Hero portrait (local assets)
 import imgPortraitBW from "@/imports/portrait-bw.png";
 import imgPortraitColor from "@/imports/portrait-color.png";
+import imgOpportunityMap from "@/imports/opportunity-map.png";
 
 const CATEGORY_CARDS = [
-
   {
     icon: <FontAwesomeIcon icon={faLayerGroup} style={{ fontSize: 24 }} />,
-    title: "Product Process / Design Ops",
-    description: "Design systems, documentation frameworks, and modular UI kits for VR and desktop applications.",
+    title: "Design Ops",
+    description: "Help early-stage teams establish design systems and processes from day one. Built a VR design system that improved dev velocity by 40% and cut inconsistencies in half.",
     path: "/design-ops",
-  },
-  {
-    icon: <FontAwesomeIcon icon={faClipboardList} style={{ fontSize: 24 }} />,
-    title: "Product Management / Ownership",
-    description: "Product strategy, roadmap planning, and bridging design, development, and business goals.",
-    path: "/product-mgmt",
   },
   {
     icon: <FontAwesomeIcon icon={faMagnifyingGlass} style={{ fontSize: 24 }} />,
     title: "UX Research",
-    description: "Menu redesigns, VR navigation improvements, and AI-assisted research methodologies.",
+    description: "Validate product ideas before costly engineering work. Used research-driven testing to de-risk features and improve user retention by 25%.",
     path: "/ux-research",
   },
   {
-    icon: <FontAwesomeIcon icon={faPalette} style={{ fontSize: 24 }} />,
-    title: "Brand, App & Web Design",
-    description: "Brand identity, web & app design, and dashboard & data visualization projects.",
-    path: "/brand-design",
-  },
-    {
-    icon: <Sparkles size={24} />,
-    title: "Personal Projects",
-    description: "Side experiments, passion projects, and creative explorations. Coming soon.",
-    path: "/personal-projects",
+    icon: <FontAwesomeIcon icon={faClipboardList} style={{ fontSize: 24 }} />,
+    title: "Product Strategy",
+    description: "Turn founder vision into roadmap. Align design, dev, and business goals so teams move in one direction.",
+    path: "/product-mgmt",
   },
 ];
 
@@ -242,9 +231,9 @@ function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="font-['Kdam_Thmor_Pro',sans-serif] text-[48px] md:text-[64px] lg:text-[72px] leading-[1.05] tracking-[4px]"
             >
-              <span className="text-[#0BBA3F]">Hola!</span>
+              <span className="text-[#0BBA3F]">Hi, I'm</span>
               <br />
-              <span className="text-white">I'm Fernando</span>
+              <span className="text-white">Fernando</span>
             </motion.h1>
 
             <motion.p
@@ -252,7 +241,7 @@ function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="font-['Roboto_Slab',serif] text-white/60 text-[15px] md:text-[17px] leading-relaxed mt-6 max-w-[480px] mx-auto md:mx-0">
-              I love working on complex problems and helping make sense of them. I align teams, ask better questions, and design products that feel powerful and intuitive.
+              Founding Designer for early-stage SaaS startups. I build user-centric products from scratch while establishing design processes that let teams scale. 7 years in SaaS. Open to co-founder opportunities.
             </motion.p>
           </div>
 
@@ -420,11 +409,10 @@ function HomePage() {
           className="scroll-mt-24 mb-10"
         >
           <h2 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#323435] text-[24px] md:text-[28px] tracking-[2px] mb-2">
-            Explore My Work
+            How I Help Founders
           </h2>
-          <p className="font-['Roboto_Slab',serif] text-[#666] text-[14px]">
-            This is a small recap of some of my latest work. </p>
-              <p className="font-['Roboto_Slab',serif] text-[#666] text-[14px]">If you're interested in knowing a bit more about myself and my process, n'hesitez pas a revenir vers moi ;)
+          <p className="font-['Roboto_Slab',serif] text-[#666] text-[14px] max-w-[640px]">
+            I help early-stage SaaS teams validate ideas fast and establish the design processes that let you scale without chaos.
           </p>
         </motion.div>
 
@@ -441,20 +429,27 @@ function HomePage() {
           ))}
         </div>
 
-        {/* Empty section placeholder */}
+        {/* How I work section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-16 border-2 border-dashed border-[#e0e0e0] rounded-lg p-10 md:p-16 flex flex-col items-center justify-center text-center"
+          className="mt-16 border border-[#e0e0e0] rounded-lg p-10 md:p-16 bg-[#f9f9f9]"
         >
-           <div className="w-16 h-16 rounded-full border-2 border-dashed border-[#0BBA3F]/30 flex items-center justify-center mb-6">
-          <Sparkles size={24} className="text-[#0BBA3F]/40" />
-        </div>
-          <p className="font-['Roboto_Slab',serif] text-[#999] text-[14px]">
-            More content coming soon
+          <h3 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#323435] text-[20px] md:text-[24px] tracking-[2px] mb-6">
+            How I work
+          </h3>
+          <p className="font-['Roboto_Slab',serif] text-[#666] text-[14px] leading-relaxed mb-8 max-w-[640px]">
+            I pair with founders on user research, rapid prototyping, and building design processes that let teams iterate fast. Available for full-time co-founder roles in pre-seed/seed SaaS.
           </p>
+          <div className="w-full">
+            <EnlargeableImage
+              src={imgOpportunityMap}
+              alt="How I work process"
+              className="w-full h-auto"
+            />
+          </div>
         </motion.div>
       </div>
 

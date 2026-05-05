@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot, faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router";
-import { NAV_ITEMS } from "../constants";
+import { NAV_ITEMS, FOOTER_ITEMS } from "../constants";
 
 export function ContactSection() {
   const [copied, setCopied] = useState(false);
@@ -39,9 +39,14 @@ export function ContactSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#0BBA3F] text-[32px] md:text-[40px] tracking-[2px] mb-8">
-            Let's talk
-          </h2>
+          <div className="mb-8">
+            <p className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[14px] mb-4 font-semibold">
+              Actively seeking co-founder opportunities with pre-seed/seed SaaS startups. Available for full-time commitment.
+            </p>
+            <h2 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#0BBA3F] text-[32px] md:text-[40px] tracking-[2px]">
+              Let's talk
+            </h2>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
@@ -91,8 +96,8 @@ export function ContactSection() {
             </div>
 
             <div>
-              <p className="font-['Roboto_Slab',serif] text-white/50 text-[14px] leading-relaxed text-right">
-                I don’t design screens. I design understanding.
+              <p className="font-[‘Roboto_Slab’,serif] text-white/50 text-[14px] leading-relaxed text-right">
+                I help founders validate ideas and scale design before it’s too late.
               </p>
             </div>
           </div>
@@ -103,6 +108,15 @@ export function ContactSection() {
             </p>
             <div className="flex flex-wrap gap-4">
               {NAV_ITEMS.map((item) => (
+                <Link
+                  key={item.id}
+                  to={item.path}
+                  className="font-['Roboto_Slab',serif] text-white/30 hover:text-[#0BBA3F] text-[11px] transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              {FOOTER_ITEMS.map((item) => (
                 <Link
                   key={item.id}
                   to={item.path}

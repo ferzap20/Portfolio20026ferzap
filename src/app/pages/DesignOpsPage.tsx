@@ -24,6 +24,14 @@ export function DesignOpsPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
+        className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] leading-relaxed mb-6 max-w-[640px]"
+      >
+        How I help SaaS founders move fast: I establish the design systems and processes that let teams validate ideas without chaos.
+      </motion.p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
         className="font-['Inter',sans-serif] text-[#666] text-[14px] leading-relaxed mb-8 max-w-[640px]"
       >
         Scaling design through systems, documentation, and cross-team processes to deliver consistent and efficient product experiences.
