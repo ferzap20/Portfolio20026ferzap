@@ -3,7 +3,10 @@
     "allow": [
       "Bash(grep:*)",
       "Bash(find:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(npm run *)",
+      "Bash(timeout 60 bash -c 'while ! grep -q \"Local:\" C:\\\\Users\\\\ferna\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-ferna-Documents-ClaudeCowork-Projects-Portfolio20026ferzap\\\\fa1458c7-b2e7-4874-8437-1446d44f0b37\\\\tasks\\\\b8460z2rj.output 2>/dev/null; do sleep 1; done; echo \"Server ready\"')"
     ]
   }
 }
