@@ -241,7 +241,7 @@ function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="font-['Roboto_Slab',serif] text-white/60 text-[15px] md:text-[17px] leading-relaxed mt-6 max-w-[480px] mx-auto md:mx-0">
-              Founding Designer for early-stage SaaS startups. I build user-centric products from scratch while establishing design processes that let teams scale. 7 years in SaaS. Open to co-founder opportunities.
+              I’m a Product Designer with 10+ years of SaaS experience helping startups build and scale user-centric products from concept to launch, while creating scalable design processes. Open to co-founder opportunities.
             </motion.p>
           </div>
 
@@ -409,10 +409,10 @@ function HomePage() {
           className="scroll-mt-24 mb-10"
         >
           <h2 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#323435] text-[24px] md:text-[28px] tracking-[2px] mb-2">
-            How I Help Founders
+            Browse Case Studies
           </h2>
           <p className="font-['Roboto_Slab',serif] text-[#666] text-[14px] max-w-[640px]">
-            I help early-stage SaaS teams validate ideas fast and establish the design processes that let you scale without chaos.
+            I help early-stage teams validate ideas fast and establish the design processes that let you scale without chaos.
           </p>
         </motion.div>
 
@@ -441,7 +441,7 @@ function HomePage() {
             How I work
           </h3>
           <p className="font-['Roboto_Slab',serif] text-[#666] text-[14px] leading-relaxed mb-8 max-w-[640px]">
-            I pair with founders on user research, rapid prototyping, and building design processes that let teams iterate fast. Available for full-time co-founder roles in pre-seed/seed SaaS.
+            I specialize in user research, rapid prototyping, and building design processes that let teams iterate fast.
           </p>
           <div className="w-full">
             <EnlargeableImage
@@ -451,6 +451,38 @@ function HomePage() {
             />
           </div>
         </motion.div>
+
+        {/* Other Work section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="scroll-mt-24 mt-16 mb-10"
+        >
+          <h2 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#323435] text-[24px] md:text-[28px] tracking-[2px] mb-2">
+            Additional Projects
+          </h2>
+          <p className="font-['Roboto_Slab',serif] text-[#666] text-[14px] max-w-[640px]">
+            Beyond clients, I explore brand design and personal projects that push creative boundaries.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <CategoryCard
+            icon={<FontAwesomeIcon icon={faPalette} style={{ fontSize: 24 }} />}
+            title="Brand & Design"
+            description="A showcase of brand identities, web design, and application interfaces. Visual work that spans startups, experimental projects, and design explorations."
+            path="/brand-design"
+            index={0}
+          />
+          <CategoryCard
+            icon={<Sparkles style={{ width: 24, height: 24 }} />}
+            title="Personal Projects"
+            description="Side projects and experimental ideas. From rapid prototypes to fully-fledged apps, these showcase problem-solving and creative exploration."
+            path="/personal-projects"
+            index={1}
+          />
+        </div>
       </div>
 
       {/* Contact / Footer */}

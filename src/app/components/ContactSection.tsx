@@ -40,9 +40,6 @@ export function ContactSection() {
           transition={{ duration: 0.5 }}
         >
           <div className="mb-8">
-            <p className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[14px] mb-4 font-semibold">
-              Actively seeking co-founder opportunities with pre-seed/seed SaaS startups. Available for full-time commitment.
-            </p>
             <h2 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#0BBA3F] text-[32px] md:text-[40px] tracking-[2px]">
               Let's talk
             </h2>
