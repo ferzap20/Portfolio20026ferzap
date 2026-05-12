@@ -28,7 +28,7 @@ export function ContactSection() {
   };
 
   return (
-    <section
+    <footer
       id="contact"
       className="bg-[#323435] py-16 md:py-20 scroll-mt-24"
     >
@@ -46,7 +46,7 @@ export function ContactSection() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4">
+            <address className="space-y-4 not-italic">
               <div className="flex items-center gap-2">
                 <a
                   href={`mailto:${email}`}
@@ -90,7 +90,7 @@ export function ContactSection() {
                   /ferzapata
                 </span>
               </a>
-            </div>
+            </address>
 
             <div>
               <p className="font-[‘Roboto_Slab’,serif] text-white/50 text-[14px] leading-relaxed text-right">
@@ -126,6 +126,6 @@ export function ContactSection() {
           </div>
         </motion.div>
       </div>
-    </section>
+    </footer>
   );
 }

@@ -3,6 +3,7 @@ import { faClipboardList } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "motion/react";
 import { SubPageLayout } from "../components/SubPageLayout";
 import { ProjectCard } from "../components/ProjectCard";
+import { CreativeWorkJsonLd } from "../components/JsonLd";
 
 // Product Management images (local files)
 import imgProdMgmt1 from "@/imports/prod-mgmt-1.png";
@@ -12,10 +13,17 @@ import imgProdMgmt4 from "@/imports/prod-mgmt-4.png";
 
 export function ProductMgmtPage() {
   return (
-    <SubPageLayout
-      icon={<FontAwesomeIcon icon={faClipboardList} style={{ fontSize: 28 }} />}
-      title="Product Management / Ownership"
-    >
+    <>
+      <CreativeWorkJsonLd
+        name="Product Management & Ownership"
+        description="Bridging design, development, and business goals through strategic product ownership and cross-team alignment."
+        keywords={["Product Strategy", "Product Management", "Roadmap Planning", "Cross-team Alignment"]}
+        slug="product-management"
+      />
+      <SubPageLayout
+        icon={<FontAwesomeIcon icon={faClipboardList} style={{ fontSize: 28 }} />}
+        title="Product Management / Ownership"
+      >
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -57,5 +65,6 @@ export function ProductMgmtPage() {
         ]}
       />
     </SubPageLayout>
+    </>
   );
 }

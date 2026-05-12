@@ -3,6 +3,7 @@ import { faPalette } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "motion/react";
 import { SubPageLayout } from "../components/SubPageLayout";
 import { ImageGallery } from "../components/ImageGallery";
+import { CreativeWorkJsonLd } from "../components/JsonLd";
 
 // Brand / Design images (local files)
 import imgBrand1 from "@/imports/brand-1.png";
@@ -28,10 +29,17 @@ import imgBrand25 from "@/imports/brand-25.png";
 
 export function BrandDesignPage() {
   return (
-    <SubPageLayout
-      icon={<FontAwesomeIcon icon={faPalette} style={{ fontSize: 28 }} />}
-      title="Brand, App and Web Design"
-    >
+    <>
+      <CreativeWorkJsonLd
+        name="Brand, App and Web Design"
+        description="Design Works Showcase — A selection of brand identity, web design, and application design projects."
+        keywords={["Brand Design", "Web Design", "App Design", "Brand Identity", "UI/UX Design"]}
+        slug="brand-design"
+      />
+      <SubPageLayout
+        icon={<FontAwesomeIcon icon={faPalette} style={{ fontSize: 28 }} />}
+        title="Brand, App and Web Design"
+      >
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -112,5 +120,6 @@ imgBrand20,
         />
       </div>
     </SubPageLayout>
+    </>
   );
 }

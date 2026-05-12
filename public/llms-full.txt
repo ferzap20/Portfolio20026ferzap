@@ -1,0 +1,174 @@
+# Fernando Zapata — Full Portfolio & Experience
+
+> Founding Designer for early-stage SaaS startups. I build user-centric products from scratch while establishing design processes that let teams scale. 7 years in SaaS. Full-time available.
+
+## Quick Profile
+- **Role:** Product Designer & Design Systems Lead
+- **Location:** Paris, France (Les Lilas)
+- **Experience:** 7 years in SaaS and product design
+- **Status:** Full-time available
+- **Languages:** French (native), English (C2), Spanish (native)
+- **Email:** fernandozapata@protonmail.com
+- **LinkedIn:** https://www.linkedin.com/in/ferzapata/
+- **CV (PDF):** https://drive.google.com/uc?export=download&id=1dqG3bSWCfuJkNSmmXq8RU4vcl2t29A9O
+
+---
+
+## Work Experience & Case Studies
+
+### Design Systems & Operations
+
+#### Design System for VR
+- **Context:** Early-stage VR product team scaling from 5 to 15 people
+- **Challenge:** Team lacked design standards, leading to inconsistent VR interactions, isolated development work, and misalignment between product, design, and engineering. Usability was unpredictable, and development was inefficient due to repeated one-off solutions.
+- **Approach:**
+  - Researched best practices and user interaction patterns in successful VR apps, games, and XR environments (including deep dives into Gravity Sketch and spatial design principles)
+  - Gathered research on spatial UI patterns, motion/gesture guidelines, depth cues, and accessibility considerations specific to immersive experiences
+  - Led collaborative sessions with designers, engineers, and product to define and validate patterns
+- **Outcome:**
+  - Established a centralized design system with reusable VR UI patterns and components
+  - Improved collaboration and alignment across product, design, and engineering teams
+  - Increased usability in testing sessions, especially around spatial navigation and gesture affordances
+  - Accelerated development velocity by reducing one-off design decisions
+- **Skills Applied:** Design systems, VR/spatial UI, cross-functional leadership, research synthesis
+
+#### Onboarding Guides & Product Documentation
+- **Context:** Growing team (20+ people across product, design, engineering, and support)
+- **Challenge:** New team members and cross-functional colleagues struggled to understand existing features or the rationale behind product decisions. Documentation was scattered, outdated, and inconsistent, slowing onboarding and knowledge transfer.
+- **Approach:**
+  - Audited existing materials and documentation practices across the organization
+  - Researched documentation frameworks from other successful teams and companies
+  - Defined a scalable documentation structure emphasizing clarity, ownership, and maintenance
+- **Outcome:**
+  - Created a centralized documentation hub in Confluence with clear feature guides and decision logs
+  - Established a scalable documentation framework adopted across product squads
+  - Improved onboarding time for new team members
+  - Feature guides became the foundation for clearer and faster customer documentation
+- **Skills Applied:** Information architecture, technical documentation, process design, team enablement
+
+---
+
+### UX Research & Validation
+
+#### Use Case: AI as a UX Research Tool
+- **Context:** Exploring novel research methodologies and AI-assisted analysis in an unfamiliar domain (education/EdTech)
+- **Challenge:** Traditional qualitative research is time-consuming. Wanted to test whether AI tools could accelerate pattern recognition, thematic analysis, and synthesis of user feedback while maintaining research rigor.
+- **Problem Statement (Simulated):** Teachers needed innovative ways to engage students during brief classroom interactions. Requirements: facilitate meaningful teacher-student interactions, enable efficient and adaptable classroom management across diverse educational contexts.
+- **Target User Persona:** Teachers uncomfortable with digital technology, seeking efficiency gains and emotional connection with students through tech-enabled teaching.
+- **Approach:**
+  - Tested AI-powered tools for pattern recognition in user feedback and automated thematic analysis
+  - Prompted AI systems to synthesize research documents and identify user thinking styles (using Indi Young's framework)
+  - Created structured tables mapping research insights to actionable user personas and pain points
+  - Cross-referenced research papers and existing products/solutions addressing the problem space
+- **Outcome:**
+  - Mapped user thinking styles to distinct teacher personas and their underlying goals
+  - Identified gaps in existing EdTech solutions
+  - Demonstrated the effectiveness of AI-assisted research for rapid hypothesis generation
+- **Skills Applied:** Qualitative research, thematic analysis, AI tooling, educational domain research, thinking styles framework
+
+#### General Research Practice
+- Validates product ideas before costly engineering work
+- Uses research-driven testing to de-risk features and improve user retention
+- Employs a mix of qualitative (interviews, usability tests) and quantitative methods
+- Synthesizes findings into actionable design and product decisions
+
+---
+
+### Product Strategy & Ownership
+
+#### Product Strategy & Vision
+- **Context:** Mid-stage SaaS company with unclear product direction across organization
+- **Challenge:** Leadership had strategic goals, but these weren't clearly translated into actionable plans or communicated across teams. This resulted in misaligned priorities, fragmented efforts, and inconsistent communication between product, design, development, and business units.
+- **Approach:**
+  - Audited current initiatives and backlog items to identify overlaps, gaps, and priority misalignment
+  - Proposed a structured roadmap framework tied to short-term deliverables (quarterly releases) and long-term product bets
+  - Transitioned from ad-hoc "when things are done" releases to 3 planned releases per year with defined MVPs for each
+  - Created visual formats tailored for different audiences: leadership direction decks, developer sprint plans, design specs, and customer-facing announcements
+- **Tools Used:** Azure DevOps (user story creation, backlog management, sprint management, metrics), Confluence, FigJam
+- **Outcome:**
+  - Aligned entire organization around shared product vision
+  - Increased release cadence and predictability
+  - Improved cross-team communication and priority clarity
+  - Enabled leadership to track progress against strategic goals
+- **Skills Applied:** Product strategy, roadmapping, cross-functional communication, change management
+
+---
+
+## Design Skills & Toolbox
+
+### Core Competencies
+- **Product Design:** User-centered design, interaction design, usability testing, design thinking
+- **Design Systems:** Pattern libraries, design tokens, component documentation, design-to-dev handoff
+- **UX Research:** User interviews, usability testing, thematic analysis, persona development, competitive analysis
+- **Information Architecture:** Information design, taxonomy, navigation design, content organization
+- **VR/Spatial Design:** Spatial UI patterns, gesture design, depth and affordance in 3D spaces, immersive UX
+
+### Design Tools
+- **Primary:** Figma (design, prototyping, collaborative design sessions)
+- **Collaboration:** Miro (workshop facilitation, brainstorms), Confluence (documentation), FigJam (design thinking)
+- **Research & Analysis:** Azure DevOps (agile tracking), various user testing platforms
+- **Specialty:** VR/3D design tools and frameworks
+
+---
+
+## Side Projects & Explorations
+
+Alongside client work, I maintain a portfolio of personal projects that explore product ideas, new technologies, and design challenges:
+
+- **Timap** — A platform for finding, creating, and joining sports matches. Built on Bolt.new as a prototype in TypeScript. Explores the intersection of social networking and sports community building.
+- **BurnAfter24h** — An experimental ephemeral messaging app designed around privacy-first principles and minimal interfaces. Explores the tension between asynchronous communication and intentional ephemerality.
+- **Eatby** — A food expiration tracker helping users reduce waste. Built with Figma Make and Claude, mobile-first. Demonstrates UX patterns for habit-forming apps.
+- **Prepshot** — Additional design exploration project.
+
+These projects serve as both creative outlets and learning opportunities to test new design tools, technologies, and frameworks.
+
+---
+
+## Approach to Collaboration
+
+I work best with:
+- Early-stage SaaS teams (pre-seed to Series A) building complex, technical products
+- Product teams in VR, spatial computing, and immersive experiences
+- Organizations ready to invest in design systems and scalable processes
+- Founders who value evidence-based decision-making and user research
+
+My methodology:
+1. **Listen first** — Understand team constraints, goals, and culture before proposing solutions
+2. **Research before design** — Validate assumptions with users before committing to designs
+3. **Systems thinking** — Design not just individual features, but scalable processes and systems
+4. **Cross-functional partnership** — Work closely with engineering and product to ensure feasibility and alignment
+5. **Iteration and measurement** — Test, measure, and iterate rather than shipping once
+
+---
+
+## How I Help Founders
+
+### Design Ops / Systems
+Establishing design systems and processes that let teams validate ideas without chaos. I help you build the infrastructure that supports rapid iteration, cross-team alignment, and consistent product experiences.
+
+### UX Research
+Uncovering user insights through research, testing, and data analysis to drive informed design decisions and meaningful product improvements. I translate user needs into actionable product directions.
+
+### Product Strategy
+Bridging design, development, and business goals through strategic product ownership. I help turn founder vision into clear, actionable roadmaps that align teams and keep execution focused.
+
+---
+
+## Education & Background
+
+[No formal education credentials listed in portfolio — background is primarily experiential in SaaS product design and design leadership]
+
+---
+
+## Contact & Links
+
+- **Email:** fernandozapata@protonmail.com
+- **LinkedIn:** https://www.linkedin.com/in/ferzapata/
+- **Portfolio:** https://ferzapata.fr
+- **CV (PDF):** https://drive.google.com/uc?export=download&id=1dqG3bSWCfuJkNSmmXq8RU4vcl2t29A9O
+
+Open to discussing design roles, design systems leadership, or founding designer opportunities with early-stage SaaS teams.
+
+---
+
+*Last updated: May 2026*

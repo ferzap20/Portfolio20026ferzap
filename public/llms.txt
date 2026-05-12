@@ -1,0 +1,40 @@
+# Fernando Zapata
+
+> Founding Designer for early-stage SaaS startups. I build user-centric products from scratch while establishing design processes that let teams scale. 7 years in SaaS. Full-time available.
+
+## About
+- Role: Product Designer & Design Systems Lead
+- Location: Paris, France (Les Lilas)
+- Years of experience: 7 years in SaaS
+- Open to: Full-time roles as Product Designer or Founding Designer
+- Contact: fernandozapata@protonmail.com
+- Languages: French (native), English (C2), Spanish (native)
+- LinkedIn: https://www.linkedin.com/in/ferzapata/
+
+## Skills
+- Design: Product Design, Design Systems, UX Research, Information Architecture
+- Tools: Figma, Confluence, Miro
+- Specialties: VR/Spatial Design, Design Ops, Cross-functional Alignment, Product Documentation
+
+## Notable Work
+
+### Design Ops & Systems
+- **Design System for VR**: Led creation of first design system for VR product. Researched spatial UI principles, motion/gesture guidelines, and accessibility for immersive experiences. Result: improved team collaboration, increased usability in testing, faster dev iteration.
+- **Onboarding & Product Documentation**: Built centralized documentation hub in Confluence. Created scalable framework adopted across squads, improving team autonomy and knowledge sharing.
+
+### User Research
+- Validates product ideas before costly engineering work. Uses research-driven testing to de-risk features and improve retention.
+
+### Product Strategy
+- Turns founder vision into roadmap. Aligns design, dev, and business goals so teams move in one direction.
+
+### Side Projects
+- Personal projects including Timap (sports match platform), BurnAfter24h (ephemeral messaging), Eatby (food expiration tracker), and others. Showcase problem-solving and creative exploration.
+
+## Contact
+- Email: fernandozapata@protonmail.com
+- CV (PDF): https://drive.google.com/uc?export=download&id=1dqG3bSWCfuJkNSmmXq8RU4vcl2t29A9O
+- Portfolio: https://ferzapata.fr
+
+## Profile
+A designer who pairs with founders on research, prototyping, and building design processes that scale. Experienced in VR/immersive products, design systems, and establishing processes for early-stage teams. Works best with product teams building complex, technical products.

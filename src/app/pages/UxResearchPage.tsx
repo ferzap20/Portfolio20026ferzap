@@ -3,6 +3,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "motion/react";
 import { SubPageLayout } from "../components/SubPageLayout";
 import { ProjectCard } from "../components/ProjectCard";
+import { CreativeWorkJsonLd } from "../components/JsonLd";
 
 // UX Research images (local files)
 import imgUxMenu1 from "@/imports/ux-menu-1.png";
@@ -21,7 +22,14 @@ import imgUxIA5 from "@/imports/ux-ia-5.png";
 
 export function UxResearchPage() {
   return (
-    <SubPageLayout icon={<FontAwesomeIcon icon={faMagnifyingGlass} style={{ fontSize: 28 }} />} title="UX Research">
+    <>
+      <CreativeWorkJsonLd
+        name="UX Research"
+        description="Uncovering user insights through research, testing, and data analysis to drive informed design decisions and meaningful product improvements."
+        keywords={["UX Research", "User Testing", "Information Architecture", "VR Navigation", "Menu Design"]}
+        slug="ux-research"
+      />
+      <SubPageLayout icon={<FontAwesomeIcon icon={faMagnifyingGlass} style={{ fontSize: 28 }} />} title="UX Research">
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -149,5 +157,6 @@ export function UxResearchPage() {
 
       </div>
     </SubPageLayout>
+    </>
   );
 }

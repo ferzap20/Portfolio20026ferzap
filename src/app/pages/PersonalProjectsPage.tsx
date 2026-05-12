@@ -5,6 +5,7 @@ import {
   PersonalProjectCard,
   PersonalProjectCardProps,
 } from "../components/PersonalProjectCard";
+import { CreativeWorkJsonLd } from "../components/JsonLd";
 
 // Project header images (local files)
 import imgTimap from "@/imports/timap.png";
@@ -65,10 +66,17 @@ const PROJECTS: PersonalProjectCardProps[] = [
 
 export function PersonalProjectsPage() {
   return (
-    <SubPageLayout
-      icon={<Sparkles size={28} />}
-      title="Personal Projects"
-    >
+    <>
+      <CreativeWorkJsonLd
+        name="Personal Projects"
+        description="Side experiments, passion projects, and creative explorations — things I build because I'm curious."
+        keywords={["Side Projects", "Prototypes", "Experimental Design", "Web Apps", "Mobile Design"]}
+        slug="personal-projects"
+      />
+      <SubPageLayout
+        icon={<Sparkles size={28} />}
+        title="Personal Projects"
+      >
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -84,5 +92,6 @@ export function PersonalProjectsPage() {
         ))}
       </div>
     </SubPageLayout>
+    </>
   );
 }

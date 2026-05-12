@@ -3,6 +3,7 @@ import { faLayerGroup } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "motion/react";
 import { SubPageLayout } from "../components/SubPageLayout";
 import { ProjectCard } from "../components/ProjectCard";
+import { CreativeWorkJsonLd } from "../components/JsonLd";
 
 // Product Process / Design Ops images (local files)
 import imgDesignSystem1 from "@/imports/design-system-1.png";
@@ -16,10 +17,17 @@ import imgOnboarding3 from "@/imports/onboarding-3.png";
 
 export function DesignOpsPage() {
   return (
-    <SubPageLayout
-      icon={<FontAwesomeIcon icon={faLayerGroup} style={{ fontSize: 28 }} />}
-      title="Product Process / Design Ops"
-    >
+    <>
+      <CreativeWorkJsonLd
+        name="Design Ops & Product Process"
+        description="How I help SaaS founders move fast by establishing design systems and processes that let teams validate ideas without chaos."
+        keywords={["Design Systems", "Design Ops", "VR Design", "Process Design"]}
+        slug="design-ops"
+      />
+      <SubPageLayout
+        icon={<FontAwesomeIcon icon={faLayerGroup} style={{ fontSize: 28 }} />}
+        title="Product Process / Design Ops"
+      >
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -131,5 +139,6 @@ export function DesignOpsPage() {
         />
       </div>
     </SubPageLayout>
+    </>
   );
 }

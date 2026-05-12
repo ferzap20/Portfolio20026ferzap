@@ -21,6 +21,7 @@ import { BrandDesignPage } from "./pages/BrandDesignPage";
 import { PersonalProjectsPage } from "./pages/PersonalProjectsPage";
 import { ContactSection } from "./components/ContactSection";
 import { EnlargeableImage } from "./components/EnlargeableImage";
+import { PersonJsonLd } from "./components/JsonLd";
 import { NAV_ITEMS } from "./constants";
 
 // Hero portrait (local assets)
@@ -78,6 +79,7 @@ function Navbar() {
   }, []);
 
   return (
+    <header>
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
@@ -198,6 +200,7 @@ function Navbar() {
         </motion.div>
       )}
     </nav>
+    </header>
   );
 }
 
@@ -287,7 +290,7 @@ function HeroSection() {
                 {/* B&W Image (Base) - Fades out on hover */}
                 <motion.img
                   src={imgPortraitBW}
-                  alt="Fernando B&W"
+                  alt="Fernando Zapata, product designer and design systems lead"
                   className="absolute inset-0 size-full object-cover"
                   variants={{
                     rest: { opacity: 1 },
@@ -299,7 +302,7 @@ function HeroSection() {
                 {/* Color Image (Overlay) - Fades in on hover */}
                 <motion.img
                   src={imgPortraitColor}
-                  alt="Fernando Color"
+                  alt="Fernando Zapata, product designer and design systems lead (color)"
                   className="absolute inset-0 size-full object-cover"
                   variants={{
                     rest: { opacity: 0 },
@@ -399,6 +402,8 @@ function HomePage() {
     >
       <HeroSection />
 
+      <main>
+
       {/* Category cards */}
       <div className="max-w-[1100px] mx-auto px-5 md:px-8 py-16 md:py-20">
         <motion.div
@@ -484,6 +489,7 @@ function HomePage() {
           />
         </div>
       </div>
+      </main>
 
       {/* Contact / Footer */}
       <ContactSection />
@@ -494,6 +500,7 @@ function HomePage() {
 export default function App() {
   return (
     <BrowserRouter>
+      <PersonJsonLd />
       <ScrollToTop />
       <Navbar />
       <Routes>

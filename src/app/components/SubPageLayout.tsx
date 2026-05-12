@@ -16,8 +16,8 @@ export function SubPageLayout({ icon, title, children }: SubPageLayoutProps) {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Header bar */}
-      <div className="bg-[#323435] pt-16 pb-10">
+      {/* Header */}
+      <header className="bg-[#323435] pt-16 pb-10">
         <div className="max-w-[1100px] mx-auto px-5 md:px-8">
           <motion.button
             initial={{ opacity: 0, x: -10 }}
@@ -42,12 +42,12 @@ export function SubPageLayout({ icon, title, children }: SubPageLayoutProps) {
             </h1>
           </motion.div>
         </div>
-      </div>
+      </header>
 
-      {/* Content */}
-      <div className="max-w-[1100px] mx-auto px-5 md:px-8 py-12 md:py-16">
+      {/* Main content */}
+      <main className="max-w-[1100px] mx-auto px-5 md:px-8 py-12 md:py-16">
         {children}
-      </div>
+      </main>
 
       {/* Footer */}
       <ContactSection />
