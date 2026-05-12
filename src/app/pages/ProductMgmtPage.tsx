@@ -33,7 +33,26 @@ export function ProductMgmtPage() {
         Bridging design, development, and business goals through strategic product ownership.
       </motion.p>
 
-      <ProjectCard
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+        className="bg-gray-50 p-6 rounded-lg mb-12 max-w-[640px]"
+      >
+        <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold mb-4 uppercase tracking-wide">
+          On this page
+        </h3>
+        <ul className="space-y-2">
+          <li>
+            <a href="#product-strategy" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
+              Product Strategy & Vision
+            </a>
+          </li>
+        </ul>
+      </motion.div>
+
+      <div id="product-strategy" className="scroll-mt-32">
+        <ProjectCard
         title="Product Strategy & Vision"
         subtitle="Roadmap Planning & Cross-Team Alignment"
         images={[imgProdMgmt1, imgProdMgmt2, imgProdMgmt3, imgProdMgmt4]}
@@ -63,7 +82,8 @@ export function ProductMgmtPage() {
               "Azure DevOps (creation of US, backlog management, sprints management, stats), Confluence, FigJam.",
           },
         ]}
-      />
+        />
+      </div>
     </SubPageLayout>
     </>
   );

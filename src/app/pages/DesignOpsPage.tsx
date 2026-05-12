@@ -44,9 +44,39 @@ export function DesignOpsPage() {
       >
         Scaling design through systems, documentation, and cross-team processes to deliver consistent and efficient product experiences.
       </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+        className="bg-gray-50 p-6 rounded-lg mb-12 max-w-[640px]"
+      >
+        <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold mb-4 uppercase tracking-wide">
+          On this page
+        </h3>
+        <ul className="space-y-2">
+          <li>
+            <a href="#design-system-vr" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
+              Design System for VR
+            </a>
+          </li>
+          <li>
+            <a href="#onboarding-docs" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
+              Onboarding Guides / Feature Documentation
+            </a>
+          </li>
+          <li>
+            <a href="#unreal-ui" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
+              Design Elements in Unreal Engine
+            </a>
+          </li>
+        </ul>
+      </motion.div>
+
       <div className="space-y-6">
-        <ProjectCard
-          title="Design System for VR"
+        <div id="design-system-vr" className="scroll-mt-32">
+          <ProjectCard
+            title="Design System for VR"
           subtitle="Design System for VR / Desktop app"
           images={[imgDesignSystem2, imgDesignSystem1, imgDesignSystem3, imgOnboarding1, imgOnboarding2]}
           details={[
@@ -74,10 +104,12 @@ export function DesignOpsPage() {
               ],
             },
           ]}
-        />
+          />
+        </div>
 
-        <ProjectCard
-          title="Onboarding Guides / Feature Documentation"
+        <div id="onboarding-docs" className="scroll-mt-32">
+          <ProjectCard
+            title="Onboarding Guides / Feature Documentation"
           subtitle="Product documentation for team autonomy"
           images={[imgUnreal1, imgOnboarding3]}
           details={[
@@ -105,10 +137,12 @@ export function DesignOpsPage() {
               ],
             },
           ]}
-        />
+          />
+        </div>
 
-        <ProjectCard
-          title="Use Case: Design Elements in Unreal Engine"
+        <div id="unreal-ui" className="scroll-mt-32">
+          <ProjectCard
+            title="Use Case: Design Elements in Unreal Engine"
           subtitle="Modular UI kit based on Atomic Design principles"
           images={[imgUnreal3]}
           details={[
@@ -136,7 +170,8 @@ export function DesignOpsPage() {
               ],
             },
           ]}
-        />
+          />
+        </div>
       </div>
     </SubPageLayout>
     </>

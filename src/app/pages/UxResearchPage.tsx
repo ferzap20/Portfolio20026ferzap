@@ -46,9 +46,39 @@ export function UxResearchPage() {
       >
         Uncovering user insights through research, testing, and data analysis to drive informed design decisions and meaningful product improvements.
       </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+        className="bg-gray-50 p-6 rounded-lg mb-12 max-w-[640px]"
+      >
+        <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold mb-4 uppercase tracking-wide">
+          On this page
+        </h3>
+        <ul className="space-y-2">
+          <li>
+            <a href="#ia-research" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
+              IA as a UX Research Tool
+            </a>
+          </li>
+          <li>
+            <a href="#menu-redesign" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
+              Menu Redesign
+            </a>
+          </li>
+          <li>
+            <a href="#vr-navigation" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
+              Improving VR App Navigation
+            </a>
+          </li>
+        </ul>
+      </motion.div>
+
       <div className="space-y-6">
-            <ProjectCard
-          title="Use Case: IA as a UX Research Tool"
+        <div id="ia-research" className="scroll-mt-32">
+          <ProjectCard
+            title="Use Case: IA as a UX Research Tool"
           subtitle="Exploring AI-assisted research methodologies"
           images={[imgUxIA3, imgUxIA2, imgUxIA4, imgUxIA5, imgUxIA1]}
           headerZoom={0.9}
@@ -87,10 +117,12 @@ export function UxResearchPage() {
                 "Take the research documents and create a table divided in 4 columns where the first one is a summary of the document, the second a summary of the insights or conclusions of the document , the 3er one if the document mentions any proposal or ideas to overcome the problem statements and the 4th one the apps, sites or products mentioned in the document",
             },
           ]}
-        />
-        
-        <ProjectCard
-          title="Use Case: Menu Redesign"
+          />
+        </div>
+
+        <div id="menu-redesign" className="scroll-mt-32">
+          <ProjectCard
+            title="Use Case: Menu Redesign"
           subtitle="Redesigning the primary product menu"
           images={[imgUxMenu2, imgUxMenu1, imgUxMenu4, imgUxMenu3]}
           headerZoom={1}
@@ -121,10 +153,12 @@ export function UxResearchPage() {
               ],
             },
           ]}
-        />
+          />
+        </div>
 
-        <ProjectCard
-          title="Use Case: Improving VR App Navigation"
+        <div id="vr-navigation" className="scroll-mt-32">
+          <ProjectCard
+            title="Use Case: Improving VR App Navigation"
           subtitle="Redesigning VR navigation to align with industry standards"
           images={[imgUxNav2, imgUxNav1]}
           headerZoom={1}
@@ -153,7 +187,8 @@ export function UxResearchPage() {
               ],
             },
           ]}
-        />
+          />
+        </div>
 
       </div>
     </SubPageLayout>
