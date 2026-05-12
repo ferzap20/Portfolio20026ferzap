@@ -34,7 +34,6 @@ export function DesignOpsPage() {
         transition={{ delay: 0.2 }}
         className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] leading-relaxed mb-6 max-w-[640px]"
       >
-        How I help SaaS founders move fast: I establish the design systems and processes that let teams validate ideas without chaos.
       </motion.p>
       <motion.p
         initial={{ opacity: 0 }}
@@ -170,8 +169,7 @@ export function DesignOpsPage() {
               ],
             },
           ]}
-          />
-        </div>
+        />
       </div>
     </SubPageLayout>
     </>
