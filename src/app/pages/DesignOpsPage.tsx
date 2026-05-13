@@ -170,6 +170,7 @@ export function DesignOpsPage() {
             },
           ]}
         />
+        </div>
       </div>
     </SubPageLayout>
     </>
