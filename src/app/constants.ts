@@ -1,6 +1,6 @@
 export const NAV_ITEMS = [
   { id: "design-ops", label: "Design Ops", path: "/design-ops" },
-  { id: "ux-research", label: "UX Research", path: "/ux-research" },
+  { id: "ux-research", label: "User Research", path: "/ux-research" },
   { id: "product-mgmt", label: "Product Strategy", path: "/product-mgmt" },
 ];
 

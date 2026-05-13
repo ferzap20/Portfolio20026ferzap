@@ -38,7 +38,7 @@ const CATEGORY_CARDS = [
   },
   {
     icon: <FontAwesomeIcon icon={faMagnifyingGlass} style={{ fontSize: 24 }} />,
-    title: "UX Research",
+    title: "User Research",
     description: "Validate product ideas before costly engineering work. Used research-driven testing to de-risk features and improve user retention by 25%.",
     path: "/ux-research",
   },

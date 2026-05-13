@@ -22,9 +22,9 @@ export function ProductMgmtPage() {
       />
       <SubPageLayout
         icon={<FontAwesomeIcon icon={faClipboardList} style={{ fontSize: 28 }} />}
-        title="Product Management / Ownership"
+        title="Product Strategy & Ownership"
       >
-        
+
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -24,12 +24,12 @@ export function UxResearchPage() {
   return (
     <>
       <CreativeWorkJsonLd
-        name="UX Research"
+        name="User Research"
         description="Uncovering user insights through research, testing, and data analysis to drive informed design decisions and meaningful product improvements."
         keywords={["UX Research", "User Testing", "Information Architecture", "VR Navigation", "Menu Design"]}
         slug="ux-research"
       />
-      <SubPageLayout icon={<FontAwesomeIcon icon={faMagnifyingGlass} style={{ fontSize: 28 }} />} title="UX Research">
+      <SubPageLayout icon={<FontAwesomeIcon icon={faMagnifyingGlass} style={{ fontSize: 28 }} />} title="User Research">
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
