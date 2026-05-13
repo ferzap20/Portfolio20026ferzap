@@ -1,19 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLayerGroup } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "motion/react";
+import { Link } from "react-router";
 import { SubPageLayout } from "../components/SubPageLayout";
-import { ProjectCard } from "../components/ProjectCard";
+import { CaseStudyCard } from "../components/CaseStudyCard";
 import { CreativeWorkJsonLd } from "../components/JsonLd";
 
-// Product Process / Design Ops images (local files)
-import imgDesignSystem1 from "@/imports/design-system-1.png";
+// Card header images (local files) — single hero image per card
 import imgDesignSystem2 from "@/imports/design-system-2.png";
-import imgDesignSystem3 from "@/imports/design-system-3.png";
-import imgOnboarding1 from "@/imports/onboarding-1.png";
-import imgOnboarding2 from "@/imports/onboarding-2.png";
-import imgUnreal1 from "@/imports/unreal-1.png";
-import imgUnreal3 from "@/imports/unreal-3.png";
 import imgOnboarding3 from "@/imports/onboarding-3.png";
+import imgUnreal3 from "@/imports/unreal-3.png";
 
 export function DesignOpsPage() {
   return (
@@ -28,151 +24,90 @@ export function DesignOpsPage() {
         icon={<FontAwesomeIcon icon={faLayerGroup} style={{ fontSize: 28 }} />}
         title="Product Process / Design Ops"
       >
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2 }}
-        className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] leading-relaxed mb-6 max-w-[640px]"
-      >
-      </motion.p>
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2 }}
-        className="font-['Inter',sans-serif] text-[#666] text-[14px] leading-relaxed mb-8 max-w-[640px]"
-      >
-        Scaling design through systems, documentation, and cross-team processes to deliver consistent and efficient product experiences.
-      </motion.p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="font-['Inter',sans-serif] text-[#666] text-[14px] leading-relaxed mb-8 max-w-[640px]"
+        >
+          Scaling design through systems, documentation, and cross-team processes to deliver consistent and efficient product experiences.
+        </motion.p>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-        className="bg-gray-50 p-6 rounded-lg mb-12 max-w-[640px]"
-      >
-        <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold mb-4 uppercase tracking-wide">
-          On this page
-        </h3>
-        <ul className="space-y-2">
-          <li>
-            <a href="#design-system-vr" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
-              Design System for VR
-            </a>
-          </li>
-          <li>
-            <a href="#onboarding-docs" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
-              Onboarding Guides / Feature Documentation
-            </a>
-          </li>
-          <li>
-            <a href="#unreal-ui" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
-              Design Elements in Unreal Engine
-            </a>
-          </li>
-        </ul>
-      </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="bg-gray-50 p-6 rounded-lg mb-12 max-w-[640px]"
+        >
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold mb-4 uppercase tracking-wide">
+            On this page
+          </h3>
+          <ul className="space-y-2">
+            <li>
+              <Link to="/design-ops/design-system-vr" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
+                Design System for VR
+              </Link>
+            </li>
+            <li>
+              <Link to="/design-ops/onboarding-docs" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
+                Onboarding Guides / Feature Documentation
+              </Link>
+            </li>
+            <li>
+              <Link to="/design-ops/unreal-ui" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
+                Design Elements in Unreal Engine
+              </Link>
+            </li>
+          </ul>
+        </motion.div>
 
-      <div className="space-y-6">
-        <div id="design-system-vr" className="scroll-mt-32">
-          <ProjectCard
-            title="Design System for VR"
-          subtitle="Design System for VR / Desktop app"
-          images={[imgDesignSystem2, imgDesignSystem1, imgDesignSystem3, imgOnboarding1, imgOnboarding2]}
-          details={[
-            {
-              label: "About the Project",
-              content:
-                "I lead the creation of the first design system for a VR product to bring consistency, efficiency, and clarity to an unstructured design and dev process. The initiative help to close the gaps between design, development, and product teams to create a more consistent and usable experience.",
-            },
-            {
-              label: "Problem to solve",
-              content:
-                "The team lacked design standards, leading to inconsistent VR interactions, isolated dev work, and misalignment across product, design, and engineering. Usability was inconsistent, and development was inefficient due to repeated one-off solutions.",
-            },
-            {
-              label: "Actions",
-              content:
-                "I researched best practices and user interaction patterns in successful VR apps, games, and XR environments (but mostly Gravity Sketch which I love). I gathered research on spatial UI principles, motion/gesture guidelines, depth cues, and accessibility considerations specific to immersive experiences.",
-            },
-            {
-              label: "Results & Impact",
-              content: [
-                "Established a centralized design system with reusable VR UI patterns",
-                "Improved collaboration and alignment across teams",
-                "Improved usability in testing sessions, especially around spatial navigation",
-              ],
-            },
-          ]}
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div id="design-system-vr" className="scroll-mt-32">
+            <CaseStudyCard
+              title="Design System for VR"
+              description="I lead the creation of the first design system for a VR product to bring consistency, efficiency, and clarity to an unstructured design and dev process. The initiative help to close the gaps between design, development, and product teams to create a more consistent and usable experience."
+              to="/design-ops/design-system-vr"
+              headerImage={imgDesignSystem2}
+              pills={[
+                { label: "Design Systems", color: "green" },
+                { label: "VR Design", color: "purple" },
+                { label: "Process", color: "teal" },
+              ]}
+              index={0}
+            />
+          </div>
+
+          <div id="onboarding-docs" className="scroll-mt-32">
+            <CaseStudyCard
+              title="Onboarding Guides / Feature Documentation"
+              description="Structured product documentation to improve team autonomy, and ensure consistent understanding of features."
+              to="/design-ops/onboarding-docs"
+              headerImage={imgOnboarding3}
+              pills={[
+                { label: "Documentation", color: "blue" },
+                { label: "Confluence", color: "indigo" },
+                { label: "Process", color: "teal" },
+              ]}
+              index={1}
+            />
+          </div>
+
+          <div id="unreal-ui" className="scroll-mt-32">
+            <CaseStudyCard
+              title="Design Elements in Unreal Engine"
+              description="Led the development of a modular UI kit in Unreal Engine based on Atomic Design principles, enabling developers to build consistent interfaces by reusing predefined components directly aligned with the Figma design system."
+              to="/design-ops/unreal-ui"
+              headerImage={imgUnreal3}
+              pills={[
+                { label: "Unreal Engine", color: "amber" },
+                { label: "Atomic Design", color: "green" },
+                { label: "UI Kit", color: "cyan" },
+              ]}
+              index={2}
+            />
+          </div>
         </div>
-
-        <div id="onboarding-docs" className="scroll-mt-32">
-          <ProjectCard
-            title="Onboarding Guides / Feature Documentation"
-          subtitle="Product documentation for team autonomy"
-          images={[imgUnreal1, imgOnboarding3]}
-          details={[
-            {
-              label: "About the Project",
-              content:
-                "Structured product documentation to improve team autonomy, and ensure consistent understanding of features.",
-            },
-            {
-              label: "Problem to solve",
-              content:
-                'New team members and cross-functional colleagues struggled to understand existing features or the "why" of new ones. There was no centralized or up-to-date documentation to support knowledge sharing.',
-            },
-            {
-              label: "Actions",
-              content:
-                "I audited existing materials and studied documentation practices from other teams and companies to define a scalable structure.",
-            },
-            {
-              label: "Results & Impact",
-              content: [
-                "Created a central documentation hub in Confluence with clear feature guides",
-                "Established a scalable documentation framework adopted across squads",
-                "These features guides help us to write customer documentation clearer and faster",
-              ],
-            },
-          ]}
-          />
-        </div>
-
-        <div id="unreal-ui" className="scroll-mt-32">
-          <ProjectCard
-            title="Use Case: Design Elements in Unreal Engine"
-          subtitle="Modular UI kit based on Atomic Design principles"
-          images={[imgUnreal3]}
-          details={[
-            {
-              label: "About the Project",
-              content:
-                "Led the development of a modular UI kit in Unreal Engine based on Atomic Design principles, enabling developers to build consistent interfaces by reusing predefined components directly aligned with the Figma design system.",
-            },
-            {
-              label: "Problem to solve",
-              content:
-                "Developers were facing challenges translating Figma designs into Unreal Engine. Figma Dev Mode wasn't being used effectively, leading to layout inconsistencies, incorrect sizing, and style mismatches. Without a shared system or reusable components, each UI screen was being built manually from scratch, increasing development time and reducing visual consistency across the app.",
-            },
-            {
-              label: "Actions",
-              content:
-                "I proposed recreating the UI kit directly inside Unreal, mirroring the Atomic Design structure used in Figma (atoms, molecules, organisms). I identified the most commonly used components—buttons, inputs, labels, modals—and rebuilt them from scratch as standardized Unreal widgets with consistent styling, sizing, and spacing. This system allowed developers to drag and drop pre-configured elements to assemble new UIs quickly and accurately.",
-            },
-            {
-              label: "Results & Impact",
-              content: [
-                "Enabled faster UI assembly by allowing developers to use ready-made widgets instead of building layouts manually",
-                "Increased developer awareness of the value of consistency, design systems, and shared practices",
-                "Saved time across teams and set a strong foundation for scalable, maintainable UI development in future projects",
-              ],
-            },
-          ]}
-        />
-        </div>
-      </div>
-    </SubPageLayout>
+      </SubPageLayout>
     </>
   );
 }
