@@ -42,20 +42,20 @@ export function DesignSystemVrPage() {
         />
 
         {/* Subtitle */}
-        <h1 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#0BBA3F] text-[28px] md:text-[36px] tracking-[2px] mb-8">
+        <h2 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#0BBA3F] text-[28px] md:text-[36px] tracking-[2px] mb-8">
           Design System for VR / Desktop app
-        </h1>
+        </h2>
 
         {/* HERO IMAGE */}
         <div className="mb-12 rounded-lg overflow-hidden bg-[#f5f5f5]">
-          <img src={imgHero} alt="Design System for VR — hero" className="w-full h-auto" />
+          <img src={imgHero} alt="Mockup of the VR design system component library showing reusable spatial UI patterns" className="w-full h-auto" />
         </div>
 
         {/* ABOUT THE PROJECT */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             About the Project
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             I lead the creation of the first design system for a VR product to bring consistency, efficiency, and clarity to an unstructured design and dev process. The initiative help to close the gaps between design, development, and product teams to create a more consistent and usable experience.
           </p>
@@ -63,9 +63,9 @@ export function DesignSystemVrPage() {
 
         {/* PROBLEM TO SOLVE */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             Problem to Solve
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             The team lacked design standards, leading to inconsistent VR interactions, isolated dev work, and misalignment across product, design, and engineering. Usability was inconsistent, and development was inefficient due to repeated one-off solutions.
           </p>
@@ -73,9 +73,9 @@ export function DesignSystemVrPage() {
 
         {/* ACTIONS */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             Actions
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             I researched best practices and user interaction patterns in successful VR apps, games, and XR environments (but mostly Gravity Sketch which I love). I gathered research on spatial UI principles, motion/gesture guidelines, depth cues, and accessibility considerations specific to immersive experiences.
           </p>
@@ -83,9 +83,9 @@ export function DesignSystemVrPage() {
 
         {/* RESULTS & IMPACT */}
         <section className="mb-12 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             Results &amp; Impact
-          </h2>
+          </h3>
           <ul className="list-disc pl-5 space-y-2 font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             <li>Established a centralized design system with reusable VR UI patterns</li>
             <li>Improved collaboration and alignment across teams</li>
@@ -95,9 +95,9 @@ export function DesignSystemVrPage() {
 
         {/* IMAGE GALLERY */}
         <section>
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-4">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-4">
             Project Gallery
-          </h2>
+          </h3>
           <ImageGallery
             images={[imgDesignSystem1, imgDesignSystem3, imgOnboarding1, imgOnboarding2]}
             columns={3}

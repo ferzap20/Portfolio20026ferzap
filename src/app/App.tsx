@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { motion } from "motion/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -19,14 +19,14 @@ import { ProductMgmtPage } from "./pages/ProductMgmtPage";
 import { UxResearchPage } from "./pages/UxResearchPage";
 import { BrandDesignPage } from "./pages/BrandDesignPage";
 import { PersonalProjectsPage } from "./pages/PersonalProjectsPage";
-// Case study sub-pages
-import { DesignSystemVrPage } from "./pages/case-studies/DesignSystemVrPage";
-import { OnboardingDocsPage } from "./pages/case-studies/OnboardingDocsPage";
-import { UnrealUiPage } from "./pages/case-studies/UnrealUiPage";
-import { IaResearchPage } from "./pages/case-studies/IaResearchPage";
-import { MenuRedesignPage } from "./pages/case-studies/MenuRedesignPage";
-import { VrNavigationPage } from "./pages/case-studies/VrNavigationPage";
-import { ProductStrategyPage } from "./pages/case-studies/ProductStrategyPage";
+// Case study sub-pages — lazy-loaded so initial bundle stays lean
+const DesignSystemVrPage = lazy(() => import("./pages/case-studies/DesignSystemVrPage").then(m => ({ default: m.DesignSystemVrPage })));
+const OnboardingDocsPage = lazy(() => import("./pages/case-studies/OnboardingDocsPage").then(m => ({ default: m.OnboardingDocsPage })));
+const UnrealUiPage = lazy(() => import("./pages/case-studies/UnrealUiPage").then(m => ({ default: m.UnrealUiPage })));
+const IaResearchPage = lazy(() => import("./pages/case-studies/IaResearchPage").then(m => ({ default: m.IaResearchPage })));
+const MenuRedesignPage = lazy(() => import("./pages/case-studies/MenuRedesignPage").then(m => ({ default: m.MenuRedesignPage })));
+const VrNavigationPage = lazy(() => import("./pages/case-studies/VrNavigationPage").then(m => ({ default: m.VrNavigationPage })));
+const ProductStrategyPage = lazy(() => import("./pages/case-studies/ProductStrategyPage").then(m => ({ default: m.ProductStrategyPage })));
 import { ContactSection } from "./components/ContactSection";
 import { EnlargeableImage } from "./components/EnlargeableImage";
 import { PersonJsonLd } from "./components/JsonLd";
@@ -511,22 +511,24 @@ export default function App() {
       <PersonJsonLd />
       <ScrollToTop />
       <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/design-ops" element={<DesignOpsPage />} />
-        <Route path="/design-ops/design-system-vr" element={<DesignSystemVrPage />} />
-        <Route path="/design-ops/onboarding-docs" element={<OnboardingDocsPage />} />
-        <Route path="/design-ops/unreal-ui" element={<UnrealUiPage />} />
-        <Route path="/ux-research" element={<UxResearchPage />} />
-        <Route path="/ux-research/ia-research" element={<IaResearchPage />} />
-        <Route path="/ux-research/menu-redesign" element={<MenuRedesignPage />} />
-        <Route path="/ux-research/vr-navigation" element={<VrNavigationPage />} />
-        <Route path="/product-mgmt" element={<ProductMgmtPage />} />
-        <Route path="/product-mgmt/product-strategy" element={<ProductStrategyPage />} />
-        <Route path="/brand-design" element={<BrandDesignPage />} />
-        <Route path="/personal-projects" element={<PersonalProjectsPage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+      <Suspense fallback={<div className="bg-[#323435] min-h-screen" />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/design-ops" element={<DesignOpsPage />} />
+          <Route path="/design-ops/design-system-vr" element={<DesignSystemVrPage />} />
+          <Route path="/design-ops/onboarding-docs" element={<OnboardingDocsPage />} />
+          <Route path="/design-ops/unreal-ui" element={<UnrealUiPage />} />
+          <Route path="/ux-research" element={<UxResearchPage />} />
+          <Route path="/ux-research/ia-research" element={<IaResearchPage />} />
+          <Route path="/ux-research/menu-redesign" element={<MenuRedesignPage />} />
+          <Route path="/ux-research/vr-navigation" element={<VrNavigationPage />} />
+          <Route path="/product-mgmt" element={<ProductMgmtPage />} />
+          <Route path="/product-mgmt/product-strategy" element={<ProductStrategyPage />} />
+          <Route path="/brand-design" element={<BrandDesignPage />} />
+          <Route path="/personal-projects" element={<PersonalProjectsPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

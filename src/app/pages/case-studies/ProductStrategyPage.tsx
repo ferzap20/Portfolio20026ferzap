@@ -41,20 +41,20 @@ export function ProductStrategyPage() {
         />
 
         {/* Subtitle */}
-        <h1 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#0BBA3F] text-[28px] md:text-[36px] tracking-[2px] mb-8">
+        <h2 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#0BBA3F] text-[28px] md:text-[36px] tracking-[2px] mb-8">
           Roadmap Planning &amp; Cross-Team Alignment
-        </h1>
+        </h2>
 
         {/* HERO IMAGE */}
         <div className="mb-12 rounded-lg overflow-hidden bg-[#f5f5f5]">
-          <img src={imgHero} alt="Product strategy — hero" className="w-full h-auto" />
+          <img src={imgHero} alt="Product roadmap visualization aligning short-term deliverables with long-term product bets across teams" className="w-full h-auto" />
         </div>
 
         {/* ABOUT THE PROJECT */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             About the Project
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             Collaborated with company leadership to define and visualize short and long-term product strategy, organize and prioritize the roadmap, and create clear communication tools to align all teams around a shared vision.
           </p>
@@ -62,9 +62,9 @@ export function ProductStrategyPage() {
 
         {/* PROBLEM TO SOLVE */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             Problem to Solve
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             There was a lack of clarity and alignment around the product's direction across the organization. Leadership had strategic goals, but these weren't clearly translated into actionable plans or shared across teams. This led to misaligned priorities, fragmented efforts, and inconsistent communication between product, design, development, and business units.
           </p>
@@ -72,9 +72,9 @@ export function ProductStrategyPage() {
 
         {/* ACTIONS */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             Actions
-          </h2>
+          </h3>
           <ul className="list-disc pl-5 space-y-2 font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             <li>Audited current initiatives and backlog items to identify overlaps, gaps, and priority misalignment.</li>
             <li>Proposed a structured roadmap framework tied to short-term deliverables and long-term product bets, along with tiered timelines.</li>
@@ -85,9 +85,9 @@ export function ProductStrategyPage() {
 
         {/* TOOLS */}
         <section className="mb-12 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             Tools
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             Azure DevOps (creation of US, backlog management, sprints management, stats), Confluence, FigJam.
           </p>
@@ -95,9 +95,9 @@ export function ProductStrategyPage() {
 
         {/* IMAGE GALLERY */}
         <section>
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-4">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-4">
             Project Gallery
-          </h2>
+          </h3>
           <ImageGallery images={[imgProdMgmt2, imgProdMgmt3, imgProdMgmt4]} columns={3} />
         </section>
       </SubPageLayout>

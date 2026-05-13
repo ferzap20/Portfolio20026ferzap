@@ -41,20 +41,20 @@ export function MenuRedesignPage() {
         />
 
         {/* Subtitle */}
-        <h1 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#0BBA3F] text-[28px] md:text-[36px] tracking-[2px] mb-8">
+        <h2 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#0BBA3F] text-[28px] md:text-[36px] tracking-[2px] mb-8">
           Redesigning the primary product menu
-        </h1>
+        </h2>
 
         {/* HERO IMAGE */}
         <div className="mb-12 rounded-lg overflow-hidden bg-white border border-[#eee]">
-          <img src={imgHero} alt="Menu redesign — hero" className="w-full h-auto" />
+          <img src={imgHero} alt="Desktop product menu redesign with unified iconography and improved visual hierarchy" className="w-full h-auto" />
         </div>
 
         {/* ABOUT THE PROJECT */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             About the Project
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             Redesigned the primary product menu to address usability issues, improve icon clarity, and unify visual language across the interface.
           </p>
@@ -62,9 +62,9 @@ export function MenuRedesignPage() {
 
         {/* PROBLEM TO SOLVE */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             Problem to Solve
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             The existing desktop menu had usability issues: users struggled to understand certain icons and menu functions, which led to confusion and misclicks. Additionally, the iconography was inconsistent in style and meaning, reducing the overall user experience and weakening the interface's visual cohesion.
           </p>
@@ -72,9 +72,9 @@ export function MenuRedesignPage() {
 
         {/* ACTIONS */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             Actions
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             I conducted an audit of the current menu and identified key friction points through user feedback, internal QA reports, and design heuristics. I benchmarked similar interfaces in comparable products and reviewed best practices in icon design and desktop navigation patterns. Based on these insights, I proposed a redesign and some guidelines that prioritized clarity, consistency, and alignment.
           </p>
@@ -82,9 +82,9 @@ export function MenuRedesignPage() {
 
         {/* KEY INSIGHTS */}
         <section className="mb-12 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             Key Insights
-          </h2>
+          </h3>
           <ul className="list-disc pl-5 space-y-2 font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             <li>No visual cue that the hamburger menu collapses to show more information</li>
             <li>VR icon launches VR mode — an inconsistency regarding the actions of other icons in the same menu</li>
@@ -95,9 +95,9 @@ export function MenuRedesignPage() {
 
         {/* IMAGE GALLERY */}
         <section>
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-4">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-4">
             Project Gallery
-          </h2>
+          </h3>
           <ImageGallery images={[imgUxMenu1, imgUxMenu4, imgUxMenu3]} columns={3} />
         </section>
       </SubPageLayout>

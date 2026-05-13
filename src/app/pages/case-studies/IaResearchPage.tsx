@@ -42,20 +42,20 @@ export function IaResearchPage() {
         />
 
         {/* Subtitle */}
-        <h1 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#0BBA3F] text-[28px] md:text-[36px] tracking-[2px] mb-8">
+        <h2 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#0BBA3F] text-[28px] md:text-[36px] tracking-[2px] mb-8">
           Exploring AI-assisted research methodologies
-        </h1>
+        </h2>
 
         {/* HERO IMAGE */}
         <div className="mb-12 rounded-lg overflow-hidden bg-[#f5f5f5]">
-          <img src={imgHero} alt="IA as a UX Research Tool — hero" className="w-full h-auto" />
+          <img src={imgHero} alt="Screenshot of AI-assisted user research project applying the Thinking Styles framework for an EdTech use case" className="w-full h-auto" />
         </div>
 
         {/* ABOUT THE PROJECT */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             About the Project
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             Given a problem statement, I wanted to explore using AI as a tool to develop a user research project in a subject I'm not particularly familiar with. Also, I wanted to test the framework “Thinking Styles“ by Indi Young.
           </p>
@@ -63,9 +63,9 @@ export function IaResearchPage() {
 
         {/* APPROACH */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             Approach
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             Tested various AI-powered tools for pattern recognition in user feedback, automated thematic analysis, and rapid synthesis of qualitative data from interviews and usability sessions.
           </p>
@@ -73,9 +73,9 @@ export function IaResearchPage() {
 
         {/* PROBLEM STATEMENT (SIMULATED) */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             Problem Statement (Simulated)
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed mb-3">
             A group of teachers need innovative ways to engage their students, even during brief interactions. Create an app that must:
           </p>
@@ -87,9 +87,9 @@ export function IaResearchPage() {
 
         {/* USER TARGET */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             User Target
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             Teachers who are not very comfortable with digital technology looking for solutions to improve efficiency in their teaching who wish to create an emotional connection and student engagement using digital technologies.
           </p>
@@ -97,9 +97,9 @@ export function IaResearchPage() {
 
         {/* 1ST PROMPT */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             1st Prompt
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed italic">
             I need to do UX research project for my product in ed tech, an app for teachers and students to use in a classroom. This time the public aimed are primary schoolers and the innovative ways to teach and captivate them, even during brief interactions. I need you to identify research documents addressed to this problematic and define type of users, transforms this information in patterns using the 'thinking styles' framework provided by Indi Young and classified it by giving me different users and their purpose in a table. After this table, give me also a list of the research papers that you use to make this report.
           </p>
@@ -107,9 +107,9 @@ export function IaResearchPage() {
 
         {/* 2ND PROMPT */}
         <section className="mb-12 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             2nd Prompt
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed italic">
             Take the research documents and create a table divided in 4 columns where the first one is a summary of the document, the second a summary of the insights or conclusions of the document, the 3er one if the document mentions any proposal or ideas to overcome the problem statements and the 4th one the apps, sites or products mentioned in the document.
           </p>
@@ -117,9 +117,9 @@ export function IaResearchPage() {
 
         {/* IMAGE GALLERY */}
         <section>
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-4">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-4">
             Project Gallery
-          </h2>
+          </h3>
           <ImageGallery images={[imgUxIA2, imgUxIA4, imgUxIA5, imgUxIA1]} columns={3} />
         </section>
       </SubPageLayout>

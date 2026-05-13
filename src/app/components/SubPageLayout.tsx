@@ -9,13 +9,10 @@ interface SubPageLayoutProps {
 }
 
 export function SubPageLayout({ icon, title, children }: SubPageLayoutProps) {
-
   return (
     <div className="bg-white min-h-screen">
-      {/* Header */}
-      <header className="bg-[#323435] pt-16 pb-10">
-        <div className="max-w-[1100px] mx-auto px-5 md:px-8"></div>
-      </header>
+      {/* Decorative spacer behind fixed navbar */}
+      <div aria-hidden="true" className="bg-[#323435] pt-16 pb-10" />
 
       {/* Main content */}
       <main className="max-w-[1100px] mx-auto px-5 md:px-8 py-12 md:py-16">

@@ -39,20 +39,20 @@ export function OnboardingDocsPage() {
         />
 
         {/* Subtitle */}
-        <h1 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#0BBA3F] text-[28px] md:text-[36px] tracking-[2px] mb-8">
+        <h2 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#0BBA3F] text-[28px] md:text-[36px] tracking-[2px] mb-8">
           Product documentation for team autonomy
-        </h1>
+        </h2>
 
         {/* HERO IMAGE */}
         <div className="mb-12 rounded-lg overflow-hidden bg-[#f5f5f5]">
-          <img src={imgHero} alt="Onboarding documentation — hero" className="w-full h-auto" />
+          <img src={imgHero} alt="Centralized Confluence documentation hub with structured feature guides for the product team" className="w-full h-auto" />
         </div>
 
         {/* ABOUT THE PROJECT */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             About the Project
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             Structured product documentation to improve team autonomy, and ensure consistent understanding of features.
           </p>
@@ -60,9 +60,9 @@ export function OnboardingDocsPage() {
 
         {/* PROBLEM TO SOLVE */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             Problem to Solve
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             New team members and cross-functional colleagues struggled to understand existing features or the "why" of new ones. There was no centralized or up-to-date documentation to support knowledge sharing.
           </p>
@@ -70,9 +70,9 @@ export function OnboardingDocsPage() {
 
         {/* ACTIONS */}
         <section className="mb-10 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             Actions
-          </h2>
+          </h3>
           <p className="font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             I audited existing materials and studied documentation practices from other teams and companies to define a scalable structure.
           </p>
@@ -80,9 +80,9 @@ export function OnboardingDocsPage() {
 
         {/* RESULTS & IMPACT */}
         <section className="mb-12 max-w-[720px]">
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
             Results &amp; Impact
-          </h2>
+          </h3>
           <ul className="list-disc pl-5 space-y-2 font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             <li>Created a central documentation hub in Confluence with clear feature guides</li>
             <li>Established a scalable documentation framework adopted across squads</li>
@@ -92,9 +92,9 @@ export function OnboardingDocsPage() {
 
         {/* IMAGE GALLERY */}
         <section>
-          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-4">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-4">
             Project Gallery
-          </h2>
+          </h3>
           <ImageGallery images={[imgUnreal1]} columns={3} />
         </section>
       </SubPageLayout>

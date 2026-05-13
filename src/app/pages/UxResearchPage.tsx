@@ -36,9 +36,9 @@ export function UxResearchPage() {
           transition={{ delay: 0.3 }}
           className="bg-gray-50 p-6 rounded-lg mb-12 max-w-[640px]"
         >
-          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold mb-4 uppercase tracking-wide">
+          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold mb-4 uppercase tracking-wide">
             On this page
-          </h3>
+          </h2>
           <ul className="space-y-2">
             <li>
               <Link to="/ux-research/ia-research" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
@@ -59,50 +59,44 @@ export function UxResearchPage() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div id="ia-research" className="scroll-mt-32">
-            <CaseStudyCard
-              title="IA as a UX Research Tool"
-              description="Given a problem statement, I wanted to explore using AI as a tool to develop a user research project in a subject I'm not particularly familiar with. Also, I wanted to test the framework “Thinking Styles“ by Indi Young."
-              to="/ux-research/ia-research"
-              headerImage={imgUxIA3}
-              pills={[
-                { label: "AI Research", color: "purple" },
-                { label: "Thinking Styles", color: "indigo" },
-                { label: "EdTech", color: "cyan" },
-              ]}
-              index={0}
-            />
-          </div>
+          <CaseStudyCard
+            title="IA as a UX Research Tool"
+            description="Given a problem statement, I wanted to explore using AI as a tool to develop a user research project in a subject I'm not particularly familiar with. Also, I wanted to test the framework “Thinking Styles“ by Indi Young."
+            to="/ux-research/ia-research"
+            headerImage={imgUxIA3}
+            pills={[
+              { label: "AI Research", color: "purple" },
+              { label: "Thinking Styles", color: "indigo" },
+              { label: "EdTech", color: "cyan" },
+            ]}
+            index={0}
+          />
 
-          <div id="menu-redesign" className="scroll-mt-32">
-            <CaseStudyCard
-              title="Menu Redesign"
-              description="Redesigned the primary product menu to address usability issues, improve icon clarity, and unify visual language across the interface."
-              to="/ux-research/menu-redesign"
-              headerImage={imgUxMenu2}
-              pills={[
-                { label: "Usability", color: "green" },
-                { label: "Iconography", color: "amber" },
-                { label: "Desktop UI", color: "blue" },
-              ]}
-              index={1}
-            />
-          </div>
+          <CaseStudyCard
+            title="Menu Redesign"
+            description="Redesigned the primary product menu to address usability issues, improve icon clarity, and unify visual language across the interface."
+            to="/ux-research/menu-redesign"
+            headerImage={imgUxMenu2}
+            pills={[
+              { label: "Usability", color: "green" },
+              { label: "Iconography", color: "amber" },
+              { label: "Desktop UI", color: "blue" },
+            ]}
+            index={1}
+          />
 
-          <div id="vr-navigation" className="scroll-mt-32">
-            <CaseStudyCard
-              title="Improving VR App Navigation"
-              description="Redesigned the navigation system for a VR product to align with industry standards, reduce user friction, and improve overall usability through research, testing, and iterative design."
-              to="/ux-research/vr-navigation"
-              headerImage={imgUxNav2}
-              pills={[
-                { label: "VR Navigation", color: "purple" },
-                { label: "User Testing", color: "green" },
-                { label: "XR Standards", color: "teal" },
-              ]}
-              index={2}
-            />
-          </div>
+          <CaseStudyCard
+            title="Improving VR App Navigation"
+            description="Redesigned the navigation system for a VR product to align with industry standards, reduce user friction, and improve overall usability through research, testing, and iterative design."
+            to="/ux-research/vr-navigation"
+            headerImage={imgUxNav2}
+            pills={[
+              { label: "VR Navigation", color: "purple" },
+              { label: "User Testing", color: "green" },
+              { label: "XR Standards", color: "teal" },
+            ]}
+            index={2}
+          />
         </div>
       </SubPageLayout>
     </>

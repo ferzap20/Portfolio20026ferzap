@@ -10,21 +10,14 @@ export function ContactSection() {
   const [copied, setCopied] = useState(false);
   const email = "fernandozapata@protonmail.com";
 
-  const handleCopyEmail = () => {
-    const textArea = document.createElement("textarea");
-    textArea.value = email;
-    textArea.style.position = "fixed";
-    textArea.style.left = "-9999px";
-    document.body.appendChild(textArea);
-    textArea.select();
+  const handleCopyEmail = async () => {
     try {
-      document.execCommand("copy");
+      await navigator.clipboard.writeText(email);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       console.error("Copy failed", err);
     }
-    document.body.removeChild(textArea);
   };
 
   return (
@@ -93,8 +86,8 @@ export function ContactSection() {
             </address>
 
             <div>
-              <p className="font-[‘Roboto_Slab’,serif] text-white/50 text-[14px] leading-relaxed text-right">
-                I help founders validate ideas and scale design before it’s too late.
+              <p className="font-['Roboto_Slab',serif] text-white/50 text-[14px] leading-relaxed text-right">
+                Explore faster, ship smarter, Let's connect!
               </p>
             </div>
           </div>

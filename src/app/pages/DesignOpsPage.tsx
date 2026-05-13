@@ -39,9 +39,9 @@ export function DesignOpsPage() {
           transition={{ delay: 0.3 }}
           className="bg-gray-50 p-6 rounded-lg mb-12 max-w-[640px]"
         >
-          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold mb-4 uppercase tracking-wide">
+          <h2 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold mb-4 uppercase tracking-wide">
             On this page
-          </h3>
+          </h2>
           <ul className="space-y-2">
             <li>
               <Link to="/design-ops/design-system-vr" className="text-[#0BBA3F] hover:text-[#0a9931] text-[13px] font-['Roboto_Slab',serif] transition-colors">
@@ -62,50 +62,44 @@ export function DesignOpsPage() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div id="design-system-vr" className="scroll-mt-32">
-            <CaseStudyCard
-              title="Design System for VR"
-              description="I lead the creation of the first design system for a VR product to bring consistency, efficiency, and clarity to an unstructured design and dev process. The initiative help to close the gaps between design, development, and product teams to create a more consistent and usable experience."
-              to="/design-ops/design-system-vr"
-              headerImage={imgDesignSystem2}
-              pills={[
-                { label: "Design Systems", color: "green" },
-                { label: "VR Design", color: "purple" },
-                { label: "Process", color: "teal" },
-              ]}
-              index={0}
-            />
-          </div>
+          <CaseStudyCard
+            title="Design System for VR"
+            description="I lead the creation of the first design system for a VR product to bring consistency, efficiency, and clarity to an unstructured design and dev process. The initiative help to close the gaps between design, development, and product teams to create a more consistent and usable experience."
+            to="/design-ops/design-system-vr"
+            headerImage={imgDesignSystem2}
+            pills={[
+              { label: "Design Systems", color: "green" },
+              { label: "VR Design", color: "purple" },
+              { label: "Process", color: "teal" },
+            ]}
+            index={0}
+          />
 
-          <div id="onboarding-docs" className="scroll-mt-32">
-            <CaseStudyCard
-              title="Onboarding Guides / Feature Documentation"
-              description="Structured product documentation to improve team autonomy, and ensure consistent understanding of features."
-              to="/design-ops/onboarding-docs"
-              headerImage={imgOnboarding3}
-              pills={[
-                { label: "Documentation", color: "blue" },
-                { label: "Confluence", color: "indigo" },
-                { label: "Process", color: "teal" },
-              ]}
-              index={1}
-            />
-          </div>
+          <CaseStudyCard
+            title="Onboarding Guides / Feature Documentation"
+            description="Structured product documentation to improve team autonomy, and ensure consistent understanding of features."
+            to="/design-ops/onboarding-docs"
+            headerImage={imgOnboarding3}
+            pills={[
+              { label: "Documentation", color: "blue" },
+              { label: "Confluence", color: "indigo" },
+              { label: "Process", color: "teal" },
+            ]}
+            index={1}
+          />
 
-          <div id="unreal-ui" className="scroll-mt-32">
-            <CaseStudyCard
-              title="Design Elements in Unreal Engine"
-              description="Led the development of a modular UI kit in Unreal Engine based on Atomic Design principles, enabling developers to build consistent interfaces by reusing predefined components directly aligned with the Figma design system."
-              to="/design-ops/unreal-ui"
-              headerImage={imgUnreal3}
-              pills={[
-                { label: "Unreal Engine", color: "amber" },
-                { label: "Atomic Design", color: "green" },
-                { label: "UI Kit", color: "cyan" },
-              ]}
-              index={2}
-            />
-          </div>
+          <CaseStudyCard
+            title="Design Elements in Unreal Engine"
+            description="Led the development of a modular UI kit in Unreal Engine based on Atomic Design principles, enabling developers to build consistent interfaces by reusing predefined components directly aligned with the Figma design system."
+            to="/design-ops/unreal-ui"
+            headerImage={imgUnreal3}
+            pills={[
+              { label: "Unreal Engine", color: "amber" },
+              { label: "Atomic Design", color: "green" },
+              { label: "UI Kit", color: "cyan" },
+            ]}
+            index={2}
+          />
         </div>
       </SubPageLayout>
     </>
