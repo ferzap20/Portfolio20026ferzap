@@ -87,7 +87,9 @@ export function ContactSection() {
 
             <div>
               <p className="font-['Roboto_Slab',serif] text-white/50 text-[14px] leading-relaxed text-right">
-                Explore faster, ship smarter, Let's connect!
+                Open to full-time Product Lead roles — Paris or remote.
+                <br />
+                FR / EN / ES
               </p>
             </div>
           </div>

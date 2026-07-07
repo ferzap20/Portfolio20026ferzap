@@ -78,8 +78,19 @@ export function ProductStrategyPage() {
           <ul className="list-disc pl-5 space-y-2 font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
             <li>Audited current initiatives and backlog items to identify overlaps, gaps, and priority misalignment.</li>
             <li>Proposed a structured roadmap framework tied to short-term deliverables and long-term product bets, along with tiered timelines.</li>
-            <li>Switched from 1 release "when things are done" to 3 per year with a clear backlog and MVPs to add in each release that will be iterated.</li>
             <li>Created visual formats (roadmap slides, FigJams, and summaries) tailored for different audiences: direction, devs, design, and customers.</li>
+          </ul>
+        </section>
+
+        {/* RESULTS & IMPACT */}
+        <section className="mb-10 max-w-[720px]">
+          <h3 className="font-['Roboto_Slab',serif] text-[#0BBA3F] text-[13px] font-semibold uppercase tracking-wide mb-3">
+            Results &amp; Impact
+          </h3>
+          <ul className="list-disc pl-5 space-y-2 font-['Inter',sans-serif] text-[#444] text-[14px] leading-relaxed">
+            <li>Moved the org from one open-ended "when it's done" release to <strong>3 predictable releases per year</strong>, each scoped as an MVP and iterated after launch.</li>
+            <li>Established a single prioritized backlog shared by product, design, development, and leadership.</li>
+            <li>Roadmap communication formats adopted across audiences (direction, devs, design, customers), replacing fragmented and inconsistent messaging.</li>
           </ul>
         </section>
 

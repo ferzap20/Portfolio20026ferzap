@@ -59,9 +59,9 @@ export function PersonJsonLd() {
     name: "Fernando Zapata",
     url: "https://ferzapata.fr",
     image: "https://ferzapata.fr/portrait-color.png",
-    jobTitle: "Product Designer & Design Systems Lead",
+    jobTitle: "Product Lead & Product Designer",
     description:
-      "Founding Designer for early-stage SaaS startups. I build user-centric products from scratch while establishing design processes that let teams scale.",
+      "Product Lead with 10 years in SaaS. I turn strategy into shipped product — owning roadmaps, release cycles, and design from concept to launch. Open to full-time Product roles in Paris or remote.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Paris",

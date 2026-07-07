@@ -39,6 +39,12 @@ import imgOpportunityMap from "@/imports/opportunity-map.png";
 
 const CATEGORY_CARDS = [
   {
+    icon: <FontAwesomeIcon icon={faClipboardList} style={{ fontSize: 24 }} />,
+    title: "Product Strategy",
+    description: "Turn founder vision into roadmap. Moved a product org from one open-ended release to 3 predictable releases per year, aligning design, dev, and business around one direction.",
+    path: "/product-mgmt",
+  },
+  {
     icon: <FontAwesomeIcon icon={faLayerGroup} style={{ fontSize: 24 }} />,
     title: "Design Ops",
     description: "Help early-stage teams establish design systems and processes from day one. Built a VR design system that improved dev velocity by 40% and cut inconsistencies in half.",
@@ -50,12 +56,6 @@ const CATEGORY_CARDS = [
     description: "Validate product ideas before costly engineering work. Used research-driven testing to de-risk features and improve user retention by 25%.",
     path: "/ux-research",
   },
-  {
-    icon: <FontAwesomeIcon icon={faClipboardList} style={{ fontSize: 24 }} />,
-    title: "Product Strategy",
-    description: "Turn founder vision into roadmap. Align design, dev, and business goals so teams move in one direction.",
-    path: "/product-mgmt",
-  },
 ];
 
 function scrollToContact() {
@@ -66,10 +66,28 @@ function scrollToContact() {
   }
 }
 
+const DEFAULT_TITLE = "Fernando Zapata — Product Lead & Product Designer | Paris";
+const PAGE_TITLES: Record<string, string> = {
+  "/design-ops": "Product Process / Design Ops",
+  "/design-ops/design-system-vr": "Design System for VR",
+  "/design-ops/onboarding-docs": "Onboarding Guides / Feature Documentation",
+  "/design-ops/unreal-ui": "Design Elements in Unreal Engine",
+  "/ux-research": "User Research",
+  "/ux-research/ia-research": "IA as a UX Research Tool",
+  "/ux-research/menu-redesign": "Menu Redesign",
+  "/ux-research/vr-navigation": "Improving VR App Navigation",
+  "/product-mgmt": "Product Strategy & Ownership",
+  "/product-mgmt/product-strategy": "Product Strategy & Vision",
+  "/brand-design": "Brand, App and Web Design",
+  "/personal-projects": "Personal Projects",
+};
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
+    const pageTitle = PAGE_TITLES[pathname];
+    document.title = pageTitle ? `${pageTitle} — Fernando Zapata` : DEFAULT_TITLE;
   }, [pathname]);
   return null;
 }
@@ -252,7 +270,7 @@ function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="font-['Roboto_Slab',serif] text-white/60 text-[15px] md:text-[17px] leading-relaxed mt-6 max-w-[480px] mx-auto md:mx-0">
-              I’m a Product Designer with 10+ years of SaaS experience helping startups build and scale user-centric products from concept to launch, while creating scalable design processes. Open to co-founder opportunities.
+              Product Lead with 10 years in SaaS. I turn strategy into shipped product — owning roadmaps, release cycles, and design from concept to launch. Open to full-time Product roles in Paris or remote.
             </motion.p>
           </div>
 
