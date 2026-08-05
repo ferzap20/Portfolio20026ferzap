@@ -2,6 +2,23 @@
   "permissions": {
     "allow": [
       "Bash(npm run build:*)"
+    ],
+    "additionalDirectories": [
+      ".."
     ]
-  }
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"$CLAUDE_PROJECT_DIR\\.claude\\hooks\\guard-write.ps1\""
+          }
+        ]
+      }
+    ]
+  },
+  "_comment": "additionalDirectories mounts the Projects/ root read-only so this project can READ sibling .claude docs and KNOWLEDGE.md. The PreToolUse hook (guard-write.ps1) HARD-BLOCKS any Write/Edit whose target resolves outside this project root. Generic guard -- adding new sibling projects needs no change here."
 }

@@ -4,9 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faXmark,
-  faLayerGroup,
-  faClipboardList,
-  faMagnifyingGlass,
   faPalette,
   faArrowRight,
   faDownload,
@@ -29,6 +26,7 @@ const VrNavigationPage = lazy(() => import("./pages/case-studies/VrNavigationPag
 const ProductStrategyPage = lazy(() => import("./pages/case-studies/ProductStrategyPage").then(m => ({ default: m.ProductStrategyPage })));
 import { ContactSection } from "./components/ContactSection";
 import { EnlargeableImage } from "./components/EnlargeableImage";
+import { CaseStudyCard } from "./components/CaseStudyCard";
 import { PersonJsonLd } from "./components/JsonLd";
 import { NAV_ITEMS } from "./constants";
 
@@ -37,24 +35,82 @@ import imgPortraitBW from "@/imports/portrait-bw.png";
 import imgPortraitColor from "@/imports/portrait-color.png";
 import imgOpportunityMap from "@/imports/opportunity-map.png";
 
-const CATEGORY_CARDS = [
+// Case study thumbnails (reuse each case study's own hero image)
+import imgCsVrNav from "@/imports/ux-nav-2.png";
+import imgCsDesignSystem from "@/imports/design-system-2.png";
+import imgCsProductStrategy from "@/imports/prod-mgmt-1.png";
+import imgCsOnboarding from "@/imports/onboarding-3.png";
+import imgCsUnreal from "@/imports/unreal-3.png";
+import imgCsIaResearch from "@/imports/ux-ia-3.png";
+
+// Same title/description/pills as the CaseStudyCard used on each category page —
+// this is the same case study shown a second time, not a new copy of it.
+const CASE_STUDIES = [
   {
-    icon: <FontAwesomeIcon icon={faClipboardList} style={{ fontSize: 24 }} />,
-    title: "Product Strategy",
-    description: "Turn founder vision into roadmap. Moved a product org from one open-ended release to 3 predictable releases per year, aligning design, dev, and business around one direction.",
-    path: "/product-mgmt",
+    title: "Improving VR App Navigation",
+    description: "Redesigned the navigation system for a VR product to align with industry standards, reduce user friction, and improve overall usability through research, testing, and iterative design.",
+    to: "/ux-research/vr-navigation",
+    headerImage: imgCsVrNav,
+    pills: [
+      { label: "VR Navigation", color: "purple" },
+      { label: "User Testing", color: "green" },
+      { label: "XR Standards", color: "teal" },
+    ],
   },
   {
-    icon: <FontAwesomeIcon icon={faLayerGroup} style={{ fontSize: 24 }} />,
-    title: "Design Ops",
-    description: "Help early-stage teams establish design systems and processes from day one. Built a VR design system that improved dev velocity by 40% and cut inconsistencies in half.",
-    path: "/design-ops",
+    title: "Design System for VR",
+    description: "I lead the creation of the first design system for a VR product to bring consistency, efficiency, and clarity to an unstructured design and dev process. The initiative help to close the gaps between design, development, and product teams to create a more consistent and usable experience.",
+    to: "/design-ops/design-system-vr",
+    headerImage: imgCsDesignSystem,
+    pills: [
+      { label: "Design Systems", color: "green" },
+      { label: "VR Design", color: "purple" },
+      { label: "Process", color: "teal" },
+    ],
   },
   {
-    icon: <FontAwesomeIcon icon={faMagnifyingGlass} style={{ fontSize: 24 }} />,
-    title: "User Research",
-    description: "Validate product ideas before costly engineering work. Used research-driven testing to de-risk features and improve user retention by 25%.",
-    path: "/ux-research",
+    title: "Product Strategy & Vision",
+    description: "Collaborated with company leadership to define and visualize short and long-term product strategy, organize and prioritize the roadmap, and create clear communication tools to align all teams around a shared vision.",
+    to: "/product-mgmt/product-strategy",
+    headerImage: imgCsProductStrategy,
+    pills: [
+      { label: "Strategy", color: "green" },
+      { label: "Roadmap", color: "blue" },
+      { label: "Cross-team", color: "indigo" },
+    ],
+  },
+  {
+    title: "Onboarding Guides / Feature Documentation",
+    description: "Structured product documentation to improve team autonomy, and ensure consistent understanding of features.",
+    to: "/design-ops/onboarding-docs",
+    headerImage: imgCsOnboarding,
+    pills: [
+      { label: "Documentation", color: "blue" },
+      { label: "Confluence", color: "indigo" },
+      { label: "Process", color: "teal" },
+    ],
+  },
+  {
+    title: "Design Elements in Unreal Engine",
+    description: "Led the development of a modular UI kit in Unreal Engine based on Atomic Design principles, enabling developers to build consistent interfaces by reusing predefined components directly aligned with the Figma design system.",
+    to: "/design-ops/unreal-ui",
+    headerImage: imgCsUnreal,
+    pills: [
+      { label: "Unreal Engine", color: "amber" },
+      { label: "Atomic Design", color: "green" },
+      { label: "UI Kit", color: "cyan" },
+    ],
+  },
+  {
+    title: "IA as a UX Research Tool",
+    description: "Given a problem statement, I wanted to explore using AI as a tool to develop a user research project in a subject I'm not particularly familiar with. Also, I wanted to test the framework “Thinking Styles“ by Indi Young.",
+    to: "/ux-research/ia-research",
+    headerImage: imgCsIaResearch,
+    pills: [
+      { label: "AI Research", color: "purple" },
+      { label: "Thinking Styles", color: "indigo" },
+      { label: "EdTech", color: "cyan" },
+    ],
   },
 ];
 
@@ -151,14 +207,14 @@ function Navbar() {
           {isHome ? (
             <button
               onClick={() => scrollToContact()}
-              className="font-['Roboto_Slab',serif] text-[13px] text-[#323435] bg-[#0BBA3F] px-4 py-1 rounded hover:bg-[#09a536] transition-colors cursor-pointer"
+              className="font-['Roboto_Slab',serif] text-[13px] text-[#323435] bg-[#0BBA3F] px-4 py-1.5 rounded hover:bg-[#09a536] transition-colors cursor-pointer"
             >
               Contact
             </button>
           ) : (
             <Link
               to="/#contact"
-              className="font-['Roboto_Slab',serif] text-[13px] text-[#323435] bg-[#0BBA3F] px-4 py-1.5 rounded-full hover:bg-[#09a536] transition-colors"
+              className="font-['Roboto_Slab',serif] text-[13px] text-[#323435] bg-[#0BBA3F] px-4 py-1.5 rounded hover:bg-[#09a536] transition-colors"
             >
               Contact
             </Link>
@@ -212,7 +268,7 @@ function Navbar() {
                 setMobileOpen(false);
                 scrollToContact();
               }}
-              className="mt-2 font-['Roboto_Slab',serif] text-[14px] text-[#323435] bg-[#0BBA3F] px-4 py-1.5 rounded-full hover:bg-[#09a536] transition-colors cursor-pointer"
+              className="mt-2 font-['Roboto_Slab',serif] text-[14px] text-[#323435] bg-[#0BBA3F] px-4 py-1.5 rounded hover:bg-[#09a536] transition-colors cursor-pointer"
             >
               Contact
             </button>
@@ -220,7 +276,7 @@ function Navbar() {
             <Link
               to="/#contact"
               onClick={() => setMobileOpen(false)}
-              className="mt-2 inline-block font-['Roboto_Slab',serif] text-[14px] text-[#323435] bg-[#0BBA3F] px-4 py-1.5 rounded-full hover:bg-[#09a536] transition-colors"
+              className="mt-2 inline-block font-['Roboto_Slab',serif] text-[14px] text-[#323435] bg-[#0BBA3F] px-4 py-1.5 rounded hover:bg-[#09a536] transition-colors"
             >
               Contact
             </Link>
@@ -272,7 +328,7 @@ function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="font-['Roboto_Slab',serif] text-white/60 text-[15px] md:text-[17px] leading-relaxed mt-6 max-w-[480px] mx-auto md:mx-0">
-              Product Lead with 10 years in SaaS. I turn strategy into shipped product — owning roadmaps, release cycles, and design from concept to launch. Open to full-time Product roles in Paris or remote.
+              Product Lead, 10 years in SaaS. I use AI to move faster from strategy to shipped product — roadmaps, release cycles, design, launch. Open to full-time roles in Paris or remote.
             </motion.p>
           </div>
 
@@ -442,21 +498,22 @@ function HomePage() {
           className="scroll-mt-24 mb-10"
         >
           <h2 className="font-['Kdam_Thmor_Pro',sans-serif] text-[#323435] text-[24px] md:text-[28px] tracking-[2px] mb-2">
-            Browse Case Studies
+            Featured Work
           </h2>
           <p className="font-['Roboto_Slab',serif] text-[#666] text-[14px] max-w-[640px]">
-            I help early-stage teams validate ideas fast and establish the design processes that let you scale without chaos.
+            Six problems, six outcomes — from VR navigation to org-wide product strategy.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {CATEGORY_CARDS.map((card, i) => (
-            <CategoryCard
-              key={card.path}
-              icon={card.icon}
-              title={card.title}
-              description={card.description}
-              path={card.path}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {CASE_STUDIES.map((cs, i) => (
+            <CaseStudyCard
+              key={cs.to}
+              title={cs.title}
+              description={cs.description}
+              to={cs.to}
+              headerImage={cs.headerImage}
+              pills={cs.pills}
               index={i}
             />
           ))}

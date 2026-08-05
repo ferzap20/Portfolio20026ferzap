@@ -1,0 +1,493 @@
+<title>IA Option 1 — Problem-First Grid</title>
+<style>
+  :root {
+    --bg-dark: #323435;
+    --bg-light: #ffffff;
+    --bg-subtle: #f7f7f6;
+    --accent: #0bba3f;
+    --accent-dark: #09a536;
+    --ink: #232425;
+    --muted: #6c6f6e;
+    --line: #e4e4e2;
+    --card-bg: #ffffff;
+  }
+  :root[data-theme="dark"] {
+    --bg-light: #1c1d1e;
+    --bg-subtle: #232425;
+    --ink: #f2f2f0;
+    --muted: #a2a5a3;
+    --line: #38393a;
+    --card-bg: #262728;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg-light: #1c1d1e;
+      --bg-subtle: #232425;
+      --ink: #f2f2f0;
+      --muted: #a2a5a3;
+      --line: #38393a;
+      --card-bg: #262728;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg-light);
+    color: var(--ink);
+    font-family: "Rockwell", "Roboto Slab", Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+  .display {
+    font-family: ui-sans-serif, "Segoe UI", system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .body-copy {
+    font-family: ui-sans-serif, "Segoe UI", system-ui, sans-serif;
+  }
+  .eyebrow {
+    font-family: ui-sans-serif, "Segoe UI", system-ui, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* ---- annotation banner ---- */
+  .note {
+    background: #fff7d6;
+    color: #4a3f00;
+    border-bottom: 1px solid #e6d98a;
+    padding: 10px 20px;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .note strong { color: var(--accent-dark); }
+  :root[data-theme="dark"] .note strong { color: #4fdc7c; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .note { background: #3a3410; color: #f0e6a8; border-bottom-color: #5c521c; }
+    :root:not([data-theme="light"]) .note strong { color: #4fdc7c; }
+  }
+  :root[data-theme="dark"] .note { background: #3a3410; color: #f0e6a8; border-bottom-color: #5c521c; }
+
+  /* ---- sticky toggle ---- */
+  .toggle-bar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg-light);
+    border-bottom: 1px solid var(--line);
+    padding: 14px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .segmented {
+    display: inline-flex;
+    background: var(--bg-subtle);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 3px;
+    gap: 3px;
+  }
+  .segmented button {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    padding: 8px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .segmented button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .segmented button[aria-pressed="true"] {
+    background: var(--accent);
+    color: #10230f;
+  }
+
+  /* ---- hero ---- */
+  .hero {
+    background: var(--bg-dark);
+    color: #fff;
+    padding: 56px 20px 60px;
+    text-align: center;
+  }
+  .hero .kicker {
+    color: var(--accent);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-size: clamp(26px, 4vw, 38px);
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  .hero p {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    color: rgba(255,255,255,0.68);
+    max-width: 560px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  main {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+
+  .section-head { margin-bottom: 28px; }
+  .section-head .eyebrow { color: var(--accent-dark); }
+  :root[data-theme="dark"] .section-head .eyebrow { color: var(--accent); }
+  .section-head h2 {
+    margin: 6px 0 8px;
+    font-size: 22px;
+    text-wrap: balance;
+  }
+  .section-head p {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 60ch;
+  }
+
+  /* ---- problem-first flat grid ---- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover, .card:focus-within {
+    border-color: rgba(11,186,63,0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(11,186,63,0.08);
+  }
+  .card-art {
+    height: 132px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: rgba(255,255,255,0.9);
+  }
+  .card-body { padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .card-tag {
+    align-self: flex-start;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    background: rgba(11,186,63,0.1);
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-weight: 600;
+  }
+  :root[data-theme="dark"] .card-tag { color: var(--accent); background: rgba(11,186,63,0.16); }
+  .card h3 {
+    margin: 0;
+    font-size: 16.5px;
+    line-height: 1.35;
+    text-wrap: balance;
+  }
+  .card .impact {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+    flex: 1;
+  }
+  .card .impact strong { color: var(--ink); font-weight: 700; }
+  .card a.readmore {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent-dark);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  :root[data-theme="dark"] .card a.readmore { color: var(--accent); }
+  .card a.readmore:hover { text-decoration: underline; }
+
+  /* ---- grouped-by-skill view ---- */
+  .skill-group { margin-bottom: 44px; }
+  .skill-group:last-child { margin-bottom: 0; }
+  .skill-group .group-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+  }
+  .skill-group .group-head h3 {
+    margin: 0;
+    font-size: 17px;
+  }
+  .skill-group .group-head span {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+  }
+  .skill-card {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px 18px;
+    background: var(--card-bg);
+  }
+  .skill-card h4 {
+    margin: 0 0 6px;
+    font-size: 14.5px;
+  }
+  .skill-card p {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  [data-view] { display: none; }
+  [data-view].active { display: block; animation: fade 0.25s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+  footer.callout {
+    background: var(--bg-subtle);
+    border-top: 1px solid var(--line);
+    padding: 40px 20px;
+  }
+  footer.callout .inner {
+    max-width: 720px;
+    margin: 0 auto;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+  footer.callout h3 { margin: 0 0 10px; font-family: "Rockwell", "Roboto Slab", Georgia, serif; }
+  footer.callout p { font-size: 13.5px; color: var(--muted); line-height: 1.6; margin: 0 0 8px; }
+</style>
+
+<div class="note">
+  This is a static mockup for reviewing an IA change — not a change to the live site.
+  Content is real (pulled from the six shipped case studies); imagery is placeholder color blocks.
+  Toggle below switches the <strong>same six case studies</strong> between the current grouping and Option 1.
+</div>
+
+<div class="toggle-bar">
+  <div class="segmented" role="tablist" aria-label="Homepage layout">
+    <button id="btn-skill" role="tab" aria-pressed="true" aria-selected="true">Current — by skill</button>
+    <button id="btn-problem" role="tab" aria-pressed="false" aria-selected="false">Option 1 — by problem</button>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="kicker">Fernando Zapata — Product Lead & Product Designer</div>
+  <h1 id="hero-h1" class="display">I help product teams turn complexity into intuitive, high-impact experiences.</h1>
+  <p id="hero-p">Six shipped case studies below, shown two ways.</p>
+</section>
+
+<main>
+
+  <div data-view="skill" class="active">
+    <div class="section-head">
+      <div class="eyebrow">Browse by discipline</div>
+      <h2 class="display">Work, grouped by skill type</h2>
+      <p>Current homepage structure — three top-level categories, each expanding into its case studies.</p>
+    </div>
+
+    <div class="skill-group">
+      <div class="group-head">
+        <h3 class="display">Product Strategy</h3>
+        <span>1 case study</span>
+      </div>
+      <div class="skill-grid">
+        <div class="skill-card">
+          <h4>Product Strategy & Vision</h4>
+          <p>Turn founder vision into roadmap.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="group-head">
+        <h3 class="display">Design Ops</h3>
+        <span>3 case studies</span>
+      </div>
+      <div class="skill-grid">
+        <div class="skill-card">
+          <h4>Design System for VR</h4>
+          <p>Established design standards for an unstructured VR product.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Onboarding Guides / Feature Documentation</h4>
+          <p>Centralized documentation hub for cross-functional teams.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Design Elements in Unreal Engine</h4>
+          <p>Bridged Figma and Unreal Engine dev workflows.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="group-head">
+        <h3 class="display">User Research</h3>
+        <span>2 case studies</span>
+      </div>
+      <div class="skill-grid">
+        <div class="skill-card">
+          <h4>Improving VR App Navigation</h4>
+          <p>Fixed a navigation system users called "unnatural."</p>
+        </div>
+        <div class="skill-card">
+          <h4>IA as a UX Research Tool</h4>
+          <p>AI-assisted research using the Thinking Styles framework.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-view="problem">
+    <div class="section-head">
+      <div class="eyebrow">Featured work</div>
+      <h2 class="display">Six problems. Six outcomes.</h2>
+      <p>Same case studies, flattened and led by the problem solved — skill type demoted to a tag. Ordered by impact, not category.</p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(135deg,#0bba3f,#0a5e2c);">🧭</div>
+        <div class="card-body">
+          <span class="card-tag">User Research</span>
+          <h3>Fixing a VR navigation system users called "unnatural"</h3>
+          <p class="impact">Task completion time cut from <strong>5–7 minutes to 2</strong>, with frustration issues eliminated.</p>
+          <a class="readmore" href="#">Read the case study →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(135deg,#2d8a4e,#123a20);">🧩</div>
+        <div class="card-body">
+          <span class="card-tag">Design Ops</span>
+          <h3>Unifying a fragmented VR design system</h3>
+          <p class="impact">Built the first design system for the product — <strong>cut inconsistencies in half</strong>, dev velocity up.</p>
+          <a class="readmore" href="#">Read the case study →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(135deg,#1f6b3a,#0d2b16);">🗺️</div>
+        <div class="card-body">
+          <span class="card-tag">Product Strategy</span>
+          <h3>Aligning a cross-functional org around one product direction</h3>
+          <p class="impact">Moved from one open-ended release to <strong>3 predictable releases a year</strong>, one shared backlog.</p>
+          <a class="readmore" href="#">Read the case study →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(135deg,#3aa85c,#155c2c);">📚</div>
+        <div class="card-body">
+          <span class="card-tag">Design Ops</span>
+          <h3>Turning tribal knowledge into documentation teams actually use</h3>
+          <p class="impact">Central Confluence hub replacing scattered, undocumented feature knowledge — <strong>adopted across squads</strong>.</p>
+          <a class="readmore" href="#">Read the case study →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(135deg,#249150,#0e3c20);">🛠️</div>
+        <div class="card-body">
+          <span class="card-tag">Design Ops</span>
+          <h3>Bridging the gap between Figma and Unreal Engine</h3>
+          <p class="impact">Reusable widgets replaced manual, screen-by-screen builds — <strong>faster UI assembly</strong>, fewer mismatches.</p>
+          <a class="readmore" href="#">Read the case study →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(135deg,#166b39,#08210f);">🧠</div>
+        <div class="card-body">
+          <span class="card-tag">User Research</span>
+          <h3>Using AI-assisted research to map how users actually think</h3>
+          <p class="impact">Applied Indi Young's Thinking Styles framework via a <strong>simulated research methodology</strong>.</p>
+          <a class="readmore" href="#">Read the case study →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="callout">
+  <div class="inner">
+    <h3 class="display">What actually changes</h3>
+    <p><strong style="color:var(--ink)">Same six case studies, same routes</strong> — this reorders and relabels only. "By skill" nests case studies two clicks deep inside a category page; "by problem" puts all six on the homepage in one scroll, led by the outcome rather than the discipline.</p>
+    <p>Design Ops still has three entries either way — restructuring doesn't shrink it, it just stops asking the visitor to guess which category their problem lives under.</p>
+  </div>
+</footer>
+
+<script>
+  var btnSkill = document.getElementById('btn-skill');
+  var btnProblem = document.getElementById('btn-problem');
+  var viewSkill = document.querySelector('[data-view="skill"]');
+  var viewProblem = document.querySelector('[data-view="problem"]');
+  var heroH1 = document.getElementById('hero-h1');
+  var heroP = document.getElementById('hero-p');
+
+  var copy = {
+    skill: {
+      h1: "I love working on complex problems.",
+      p: "Product Strategy, Design Ops, User Research — pick a discipline to see the work."
+    },
+    problem: {
+      h1: "I help product teams turn complexity into intuitive, high-impact experiences.",
+      p: "Six shipped case studies below, led by the problem they solved."
+    }
+  };
+
+  function show(view) {
+    var isSkill = view === 'skill';
+    viewSkill.classList.toggle('active', isSkill);
+    viewProblem.classList.toggle('active', !isSkill);
+    btnSkill.setAttribute('aria-pressed', String(isSkill));
+    btnSkill.setAttribute('aria-selected', String(isSkill));
+    btnProblem.setAttribute('aria-pressed', String(!isSkill));
+    btnProblem.setAttribute('aria-selected', String(!isSkill));
+    heroH1.textContent = copy[view].h1;
+    heroP.textContent = copy[view].p;
+  }
+
+  btnSkill.addEventListener('click', function () { show('skill'); });
+  btnProblem.addEventListener('click', function () { show('problem'); });
+</script>

@@ -61,7 +61,7 @@ export function PersonJsonLd() {
     image: "https://ferzapata.fr/portrait-color.png",
     jobTitle: "Product Lead & Product Designer",
     description:
-      "Product Lead with 10 years in SaaS. I turn strategy into shipped product — owning roadmaps, release cycles, and design from concept to launch. Open to full-time Product roles in Paris or remote.",
+      "Product Lead, 10 years in SaaS. I use AI to move faster from strategy to shipped product — roadmaps, release cycles, design, launch. Open to full-time roles in Paris or remote.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Paris",
