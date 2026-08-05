@@ -43,6 +43,7 @@ export function ContactSection() {
               <div className="flex items-center gap-2">
                 <a
                   href={`mailto:${email}`}
+                  data-umami-event="contact-email-click"
                   className="flex items-center gap-3 text-white/70 hover:text-[#0BBA3F] transition-colors group"
                 >
                   <FontAwesomeIcon
@@ -56,6 +57,7 @@ export function ContactSection() {
                 </a>
                 <button
                   onClick={handleCopyEmail}
+                  data-umami-event="email-copy"
                   className="text-white/40 hover:text-[#0BBA3F] transition-colors cursor-pointer"
                   title="Copy email"
                 >
@@ -72,6 +74,7 @@ export function ContactSection() {
                 href="https://linkedin.com/in/ferzapata"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-umami-event="linkedin-click"
                 className="flex items-center gap-3 text-white/70 hover:text-[#0BBA3F] transition-colors group"
               >
                 <FontAwesomeIcon

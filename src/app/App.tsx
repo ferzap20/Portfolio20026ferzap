@@ -142,6 +142,7 @@ function Navbar() {
             href="https://drive.google.com/uc?export=download&id=1dqG3bSWCfuJkNSmmXq8RU4vcl2t29A9O"
             target="_blank"
             rel="noopener noreferrer"
+            data-umami-event="cv-download"
             className="font-['Roboto_Slab',serif] text-[13px] text-white/70 hover:text-[#0BBA3F] border border-white/20 hover:border-[#0BBA3F]/40 px-4 py-1 rounded transition-colors flex items-center gap-2"
           >
             <FontAwesomeIcon icon={faDownload} style={{ fontSize: 12 }} />
@@ -198,6 +199,7 @@ function Navbar() {
             href="https://drive.google.com/uc?export=download&id=1dqG3bSWCfuJkNSmmXq8RU4vcl2t29A9O"
             target="_blank"
             rel="noopener noreferrer"
+            data-umami-event="cv-download"
             onClick={() => setMobileOpen(false)}
             className="mt-2 inline-flex items-center gap-2 font-['Roboto_Slab',serif] text-[14px] text-white/70 hover:text-[#0BBA3F] border border-white/20 hover:border-[#0BBA3F]/40 px-4 py-1.5 rounded transition-colors"
           >
